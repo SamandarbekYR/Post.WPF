@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\close.png" />
+    <None Remove="Assets\Images\login.png" />
+    <None Remove="Assets\Images\login_bg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Icons\" />
+    <Folder Include="Components\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\close.png" />
+    <Resource Include="Assets\Images\login.png" />
+    <Resource Include="Assets\Images\login_bg.jpg" />
+  </ItemGroup>
+
+</Project>
