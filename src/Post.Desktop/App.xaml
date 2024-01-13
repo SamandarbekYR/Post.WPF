@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Post.Desktop"
              StartupUri="/Windows/Login.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="/Styles/Label/LabelStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/TextBox/TextBoxStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Button/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Border/BorderStyles.xaml"/>
+            
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

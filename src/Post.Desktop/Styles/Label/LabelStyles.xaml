@@ -1,4 +1,18 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="LoginTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="JetBrains Mono"/>
+        <Setter Property="Foreground" Value="#36047F"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
     
+    <Style x:Key="LabelLogInButton" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="JetBrains Mono"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
 </ResourceDictionary>
