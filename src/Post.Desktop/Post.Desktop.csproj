@@ -9,21 +9,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\barcode.png" />
     <None Remove="Assets\Images\close.png" />
+    <None Remove="Assets\Images\debt.png" />
+    <None Remove="Assets\Images\left.png" />
     <None Remove="Assets\Images\login.png" />
     <None Remove="Assets\Images\login_bg.jpg" />
+    <None Remove="Assets\Images\logout_left.png" />
+    <None Remove="Assets\Images\rbox.png" />
+    <None Remove="Assets\Images\receipt.png" />
+    <None Remove="Assets\Images\refresh.png" />
+    <None Remove="Assets\Images\search.png" />
+    <None Remove="Assets\Images\settings.png" />
+    <None Remove="Assets\Images\user.png" />
+    <None Remove="Assets\Images\users.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Icons\" />
     <Folder Include="Components\" />
     <Folder Include="Pages\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Images\barcode.png" />
     <Resource Include="Assets\Images\close.png" />
+    <Resource Include="Assets\Images\debt.png" />
+    <Resource Include="Assets\Images\left.png" />
     <Resource Include="Assets\Images\login.png" />
     <Resource Include="Assets\Images\login_bg.jpg" />
+    <Resource Include="Assets\Images\logout_left.png" />
+    <Resource Include="Assets\Images\rbox.png" />
+    <Resource Include="Assets\Images\receipt.png" />
+    <Resource Include="Assets\Images\refresh.png" />
+    <Resource Include="Assets\Images\search.png" />
+    <Resource Include="Assets\Images\settings.png" />
+    <Resource Include="Assets\Images\user.png" />
+    <Resource Include="Assets\Images\users.png" />
   </ItemGroup>
 
 </Project>
