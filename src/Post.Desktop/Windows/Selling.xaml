@@ -18,7 +18,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="10">
+        <Grid Grid.Column="0" 
+              Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="8*"/>
@@ -31,29 +32,29 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0"
-                      Margin="10,0">
-                    <StackPanel VerticalAlignment="Center">
+                <Border Grid.Column="0"
+                        Margin="10,0">
+                    <StackPanel  VerticalAlignment="Center">
                         <TextBlock Text="Naqd pul"
-                                   Style="{DynamicResource MoneyLabel}"/>
+                                   Style="{DynamicResource MoneyLabel}"
+                                   />
                         <Border Margin="0 10 0 0"
                                 CornerRadius="12" 
                                 Background="White">
-                            <StackPanel
-                                        Margin="8">
+                            <StackPanel Margin="8">
                                 <TextBox Style="{DynamicResource MoneyTextBox}"
                                          Text="0">
                                 </TextBox>
                                 <Border  HorizontalAlignment="Left"
                                          Style="{DynamicResource LoginBorder}"
-                                         Width="200"/>
+                                         MinWidth="200"/>
                             </StackPanel>
                         </Border>
                     </StackPanel>
-                </Grid>
+                </Border>
 
-                <Grid Grid.Column="1"
-                      Margin="10,0">
+                <Border Grid.Column="1"
+                        Margin="10,0">
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Style="{DynamicResource MoneyLabel}"
                                    Text="Platik karta"/>
@@ -66,13 +67,13 @@
                                 </TextBox>
                                 <Border HorizontalAlignment="Left"
                                         Style="{DynamicResource LoginBorder}"
-                                        Width="200"/>
+                                        MinWidth="200"/>
                             </StackPanel>
                         </Border>
                     </StackPanel>
-                </Grid>
+                </Border>
 
-                <Grid Grid.Column="2"
+                <Border Grid.Column="2"
                       Margin="10,0">
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="Chegirma"
@@ -86,13 +87,13 @@
                                 </TextBox>
                                 <Border HorizontalAlignment="Left"
                                         Style="{DynamicResource LoginBorder}"
-                                        Width="200"/>
+                                        MinWidth="200"/>
                             </StackPanel>
                         </Border>
                     </StackPanel>
-                </Grid>
+                </Border>
 
-                <Grid Grid.Column="3"
+                <Border Grid.Column="3"
                       Margin="10,0">
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Style="{DynamicResource MoneyLabel}"
@@ -106,23 +107,24 @@
                                 </TextBox>
                                 <Border HorizontalAlignment="Left"
                                         Style="{DynamicResource LoginBorder}"
-                                        Width="200"/>
+                                        MinWidth="200"/>
                             </StackPanel>
                         </Border>
                     </StackPanel>
-                </Grid>
+                </Border>
             </Grid>
                 
-        <Grid Grid.Row="1" >
+            
+            
+            
+        <Border Grid.Row="1" >
                 <Grid Margin="10">
                     <DataGrid Background="#ffffff"
                               AutoGenerateColumns="False"
                               CanUserAddRows="false"
                               CanUserDeleteRows="False"
                               IsReadOnly="True">
-                        
                         <DataGrid.Columns>
-                            
                             <!--QR-Code-->
                             <DataGridTemplateColumn Width="0.8*">
                                 <DataGridTemplateColumn.HeaderTemplate>
@@ -216,25 +218,32 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-
                         </DataGrid.Columns>
-                        
-                        
-                        
                     </DataGrid>
-                    
                 </Grid>
-        </Grid>
-            <StackPanel Grid.Row="2" Margin="0,10,5,5"
-                        Orientation="Horizontal">
-                <Button Style="{DynamicResource SellingExitButton}">
-                </Button>
-                <Button Style="{DynamicResource SellingSettingButton}">
-                </Button>
-                <Border CornerRadius="6" 
-                        Background="White"
-                        Height="50"
-                        Width="310">
+        </Border>
+            <Grid Grid.Row="2" Margin="0,10,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                        Margin="0 2 0 2">
+                       <Button Style="{DynamicResource SellingExitButton}">
+                       </Button>
+                </Border>
+                <Border Grid.Column="1" 
+                        Margin="0 2 0 2">
+                    <Button Style="{DynamicResource SellingSettingButton}">
+                    </Button>
+                </Border>
+                    <Border Grid.Column="2" CornerRadius="6" 
+                            Background="White" 
+                            Margin="0 2 0 2">
                     <StackPanel Margin="10"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
@@ -245,191 +254,195 @@
                         </TextBox>
                     </StackPanel>
                 </Border>
-                <Button Style="{DynamicResource SellingBuyersButton}">
-                </Button>
-                <Button Style="{DynamicResource SellingPaymentNationButton}">
-                </Button>
-            </StackPanel>
+                <Border Grid.Column="3"
+                        Margin="0 2 0 2">
+                    <Button Style="{DynamicResource SellingBuyersButton}">
+                    </Button>
+                </Border>
+                <Border Grid.Column="4"
+                        Margin="0 2 0 2">
+                    <Button Style="{DynamicResource SellingPaymentNationButton}">
+                    </Button>
+                </Border>
+            </Grid>
         </Grid >
 
-        <Grid Grid.Column="1"
+        <Grid Grid.Column="2"
               Background="Transparent">
-            <StackPanel Orientation="Vertical">
-                <Border CornerRadius="6" 
-                        Background="Ivory" Height="70"
-                        Margin="15 10">
-                    <StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                Background="Transparent">
-                        <Image Source="/Assets//Images/user.png" Stretch="Uniform"
-                               Height="50"
-                               Margin="10 0 5 0"/>
-                        <StackPanel Width="250"
-                                    VerticalAlignment="Center">
-                            <TextBlock Text="Nodirbek Abdulaxadov"
-                                       FontSize="18"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="0.3*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"
+                  Background="White" 
+                  Margin="10"> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0"
+                      Margin="15">
+                    <Image Source="/Assets/Images/user.png" 
+                           Stretch="Uniform"/>
+                </Grid>
+                  <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock Text="Samandarbek Yigitaliyev"
+                                       FontSize="16"
                                        FontWeight="Bold"/>
                             <TextBlock Text="Seller"
                                        FontSize="14"/>
                         </StackPanel>
-                        <Button HorizontalAlignment="Left"
-                                Style="{DynamicResource LoginShutDownButton}"
-                                Click="btnShutDown">
-                        </Button>
-
-                    </StackPanel>
-
+                <Border Grid.Column="2"
+                        Margin="10 8 10 10">
+                    <Button Style="{DynamicResource LoginShutDownButton}"
+                            Click="btnShutDown">
+                    </Button>
                 </Border>
-                <Grid Height="597"
-              Margin="10,10,10,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="1.2*"/>
-                        <RowDefinition Height="1.2*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid Grid.Row="0">
-                        <Border CornerRadius="6" 
-                                Margin="5,10"
-                                BorderThickness="0"
-                                Background="White">
-                            <TextBox Margin="5" Style="{DynamicResource SellingEnterTextBox}">
-                            </TextBox>
-                        </Border>
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Column="0"
-                                Style="{DynamicResource SellingNumberSeven}">
-                            
-                        </Button>
-                        <Button Grid.Column="1"
-                                Style="{DynamicResource SellingNumberEight}">
-                        </Button>
-                        <Button Grid.Column="2"
-                                Style="{DynamicResource SellingNumberNine}">
-                        </Button>
-                    </Grid>
-                    <Grid Grid.Row="2">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Column="0"
-                                Style="{DynamicResource SellingNumberFour}">
-                        </Button>
-                        <Button Grid.Column="1"
-                                Style="{DynamicResource SellingNumberFive}">
-                        </Button>
-                        <Button Grid.Column="2"
-                                Style="{DynamicResource SellingNumberSix}">
-                        </Button>
-                    </Grid>
-                    <Grid Grid.Row="3">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Column="0"
-                                Style="{DynamicResource SellingNumberOne}">
-                        </Button>
-                        <Button Grid.Column="1"
-                                Style="{DynamicResource SellingNumberTwo}">
-                        </Button>
-                        <Button Grid.Column="2"
-                                Style="{DynamicResource SellingNumberThree}">
-                        </Button>
-                    </Grid>
-                    <Grid Grid.Row="4">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Column="0"
-                                Style="{DynamicResource SellingNumberZero}" >
-                        </Button>
-                        <Button Grid.Column="1"
-                                Style="{DynamicResource SellingNumberThreeZero}">
-                        </Button>
-                        <Button Grid.Column="2"
-                                Style="{DynamicResource SellingLeft}">
-                        </Button>
-                    </Grid>
-
-                    <Grid Grid.Row="5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0"
-                                Style="{DynamicResource SellingScanning}">
-                        </Button>
-                        <Button Grid.Column="1"
-                                Style="{DynamicResource SellingSelling}">
-                        </Button>
-
-                        <Button Grid.Column="2"
-                                Style="{DynamicResource SellingRefresh}">
-                        </Button>
-                    </Grid>
-                    <Grid Grid.Row="6">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0"
-                                Style="{DynamicResource SellingSearch}">
-                        </Button>
-                        <Button Grid.Column="1"
-                                Style="{DynamicResource SellingNation}">
-                        </Button>
-                        <Button Grid.Column="2"
-                                Style="{DynamicResource SellingReturn}">
-                        </Button>
-                    </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Border CornerRadius="6" 
+                        Margin="10 10"
+                        BorderThickness="0"
+                        Background="White">
+                    <TextBox Margin="5" Style="{DynamicResource SellingEnterTextBox}">
+                    </TextBox>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="2" 
+                  Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.0*"/>
+                    <RowDefinition Height="1.0*"/>
+                    <RowDefinition Height="1.0*"/>
+                    <RowDefinition Height="1.0*"/>
+                    <RowDefinition Height="1.1*"/>
+                    <RowDefinition Height="1.1*"/>
+                </Grid.RowDefinitions>
+               
+                <Grid Grid.Row="0"
+                      Margin="0 0 0 8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" 
+                                    Margin="0 0 4 0">
+                               <Button Style="{DynamicResource SellingNumberSeven}"/>
+                             </Border>
+                            <Border Grid.Column="1"
+                                    Margin="2 0 2 0">
+                                <Button Style= "{DynamicResource SellingNumberEight}"/>
+                            </Border>
+                            <Border Grid.Column="2"
+                                    Margin="4 0 0 0">
+                                <Button Style="{DynamicResource SellingNumberNine}"/>
+                            </Border>
                 </Grid>
-
-            </StackPanel>
-
-            <Grid HorizontalAlignment="Right"
-            VerticalAlignment="Bottom"
-            Width="360"
-            Margin="5,0,15,10"
-            Background="White">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <StackPanel Margin="10,0" Orientation="Vertical">
-                        <TextBlock Text="14:13"
-                       FontSize="30"
-                       x:Name="clock"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Left"/>
-                        <TextBlock Text="3-mart, 2023-yil"
-                       FontSize="18"
-                       x:Name="date"
-                       FontWeight="SemiBold"
-                       HorizontalAlignment="Left"/>
-                    </StackPanel>
-                </StackPanel>
+                <Grid Grid.Row="1"
+                      Margin="0 0 0 8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" 
+                            Margin="0 0 4 0">
+                        <Button Style="{DynamicResource SellingNumberFour}"/>
+                    </Border>
+                    <Border Grid.Column="1"
+                            Margin="2 0 2 0">
+                        <Button Style= "{DynamicResource SellingNumberFive}"/>
+                    </Border>
+                    <Border Grid.Column="2"
+                            Margin="4 0 0 0">
+                        <Button Style="{DynamicResource SellingNumberSix}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="2"
+                      Margin="0 0 0 8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" 
+                            Margin="0 0 4 0">
+                        <Button Style="{DynamicResource SellingNumberOne}"/>
+                    </Border>
+                    <Border Grid.Column="1"
+                            Margin="2 0 2 0">
+                        <Button Style= "{DynamicResource SellingNumberTwo}"/>
+                    </Border>
+                    <Border Grid.Column="2"
+                            Margin="4 0 0 0">
+                        <Button Style="{DynamicResource SellingNumberThree}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="3"
+                      Margin="0 0 0 8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" 
+                            Margin="0 0 4 0">
+                        <Button Style="{DynamicResource SellingNumberThree}"/>
+                    </Border>
+                    <Border Grid.Column="1"
+                            Margin="2 0 2 0">
+                        <Button Style= "{DynamicResource SellingNumberThreeZero}"/>
+                    </Border>
+                    <Border Grid.Column="2"
+                            Margin="4 0 0 0">
+                        <Button Style="{DynamicResource SellingLeft}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="4"
+                      Margin="0 0 0 8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" 
+                            Margin="0 0 4 0">
+                        <Button Style="{DynamicResource SellingScanning}"/>
+                    </Border>
+                    <Border Grid.Column="1"
+                            Margin="2 0 2 0">
+                        <Button Style= "{DynamicResource SellingSelling}"/>
+                    </Border>
+                    <Border Grid.Column="2"
+                            Margin="4 0 0 0">
+                        <Button Style="{DynamicResource SellingRefresh}"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="5"
+                      Margin="0 0 0 8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" 
+                            Margin="0 0 4 0">
+                        <Button Style="{DynamicResource SellingSearch}"/>
+                    </Border>
+                    <Border Grid.Column="1"
+                            Margin="2 0 2 0">
+                        <Button Style= "{DynamicResource SellingNation}"/>
+                    </Border>
+                    <Border Grid.Column="2"
+                            Margin="4 0 0 0">
+                        <Button Style="{DynamicResource SellingReturn}"/>
+                    </Border>
+                </Grid>
             </Grid>
         </Grid>
-
     </Grid>
 </Window>

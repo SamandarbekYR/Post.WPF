@@ -38,10 +38,13 @@
 
     <Style x:Key="SellingEnterTextBox" TargetType="{x:Type TextBox}">
         <Setter Property="Padding" Value="10 2"/>
-        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="FontSize" Value="30"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="ExtraBold"/>
         <Setter Property="FontFamily" Value="JetBrains Mono"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="350"/>
     </Style>
 
 </ResourceDictionary>
