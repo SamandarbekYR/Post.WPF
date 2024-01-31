@@ -8,18 +8,27 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="#36047F" 
+                    <Border x:Name="border"
+                            Background="#36047F" 
                             CornerRadius="12">
                         <Label Style="{DynamicResource LabelLogInButton}"
                                Foreground="White"
                                Content="{TemplateBinding Content}">
                         </Label>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#3604D3" TargetName="border"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#24009A" TargetName="border"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
+    
     <Style x:Key="LoginForgotPasswordButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Height" Value="28"/>
@@ -29,11 +38,577 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
-                        <Label Style="{DynamicResource LabelLogInButton}" 
+                        <Label x:Name="label"
+                               Style="{DynamicResource LabelLogInButton}" 
                                Foreground="#0371BC"
                                Content="{TemplateBinding Content}">
                         </Label>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#BC8058" TargetName="label"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LoginShutDownButton" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="btnShutDown"
+                            Background="Red" 
+                            CornerRadius="20"
+                            Padding="14">
+                        <Image Source="/Assets/Images/close.png"
+                               Stretch="Uniform"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="btnShutDown" Property="Background" Value="#FF2C50"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="btnShutDown" Property="Background" Value="#FF4959"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LockLoginBtn" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="btnShutDown"
+                          Background="Transparent" 
+                          CornerRadius="12">
+                        <Path x:Name="pathLockUnlock"
+                              Fill="#334CC2" 
+                              Data="{DynamicResource lockLogin}"
+                              Width="25"
+                              Height="25"
+                              Stretch="Uniform">
+                        </Path>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Data" Value="{DynamicResource UnlockLogin}" TargetName="pathLockUnlock"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="PhoneNumIcon" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="btnShutDown"
+                       Background="Transparent" 
+                       CornerRadius="12">
+                        <Path x:Name="pathLockUnlock"
+                           Fill="#334CC2" 
+                           Data="{DynamicResource PhoneLogin}"
+                           Width="25"
+                           Height="25"
+                           Stretch="Uniform">
+                        </Path>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SellingExitButton" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6" Background="#b51800"
+                            BorderBrush="#b51800">
+                        <StackPanel Margin="5"
+                                    Orientation="Horizontal">
+                            <Image Source="/Assets/Images/logout_left.png" 
+                                   Stretch="Uniform"
+                                   Height="30"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Exit"
+                                       Margin="10 0"
+                                       Foreground="White">
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SellingSettingButton" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6" Background="#3F51B5"
+                            BorderBrush="#3F51B5">
+                        <StackPanel Margin="5"
+                                 Orientation="Horizontal">
+                            <Image Source="/Assets/Images/settings.png" 
+                                Stretch="Uniform"
+                                Width="30"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                    Text="Exit"
+                                    Margin="10 0"
+                                    Foreground="White">
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SellingBuyersButton" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6" Background="#3F51B5"
+                            BorderBrush="#3F51B5">
+                        <StackPanel Margin="5"
+                                    Orientation="Horizontal">
+                            <Image Source="/Assets/Images/users.png"
+                                   Stretch="Uniform"
+                                   Width="30"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Buyers"
+                                       Margin="10 0"
+                                       Foreground="White">
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SellingPaymentNationButton" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6" Background="#3F51B5"
+                            BorderBrush="#3F51B5">
+                        <StackPanel Margin="5"
+                           Orientation="Horizontal">
+                            <Image Source="/Assets/Images/users.png"
+                                   Stretch="Uniform"
+                                   Width="30"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Payment Nation"
+                                       Margin="10 0"
+                                       Foreground="White">
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SellingNumberThreeZero" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                            <TextBlock FontSize="36"
+                                       Text="000"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingNumberZero" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Margin" Value="5 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <TextBlock FontSize="36"
+                                       Text="0"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SellingNumberOne" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <TextBlock FontSize="36"
+                                   Text="1"
+                                   Foreground="White"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        
+    </Style>
+
+    <Style x:Key="SellingNumberTwo" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                            <TextBlock FontSize="36"
+                                       Text="2"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingNumberThree" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                            <TextBlock FontSize="36"
+                                     Text="3"
+                                     Foreground="White"
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingNumberFour" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                            <TextBlock FontSize="36"
+                                       Text="4"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SellingNumberFive" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                            <TextBlock FontSize="36"
+                                       Text="5"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingNumberSix" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+
+                            <TextBlock FontSize="36"
+                                       Text="6"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingNumberSeven" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                            <TextBlock FontSize="36"
+                                       Text="7"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingNumberEight" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5"
+                            >
+                            <TextBlock FontSize="36"
+                                       Text="8"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SellingNumberNine" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                            <TextBlock FontSize="36"
+                                       Text="9"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingScanning" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <Image Height="50" 
+                                   Source="/Assets/Images/barcode.png"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Scanning"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingSelling" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <Image Height="40" 
+                                   Source="/Assets/Images/receipt.png"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                    Text="Selling"
+                                    Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingRefresh" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <Image Height="40" 
+                                   Source="/Assets/Images/refresh.png"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Refresh"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SellingSearch" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <Image Height="40" 
+                                   Source="/Assets/Images/search.png"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Selling"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingNation" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <Image Height="40" 
+                                   Source="/Assets/Images/debt.png"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Selling"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingReturn" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#3F51B5"
+                            Background="#3F51B5">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <Image Height="40" 
+                                   Source="/Assets/Images/rbox.png"/>
+                            <TextBlock Style="{DynamicResource MoneyLabel}"
+                                       Text="Selling"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="SellingLeft" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="#cf0018"
+                            Background="#cf0018">
+                            <Image Height="40" 
+                                   Source="/Assets/Images/left.png"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

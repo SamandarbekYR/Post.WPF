@@ -6,7 +6,7 @@
         <Setter Property="Height" Value="24"/>
         <Setter Property="Width" Value="200"/>
         <Setter Property="Margin" Value="0 6 0 0"/>
-        <Setter Property="Foreground" Value="#36047F"/>
+        <Setter Property="Foreground" Value="DarkGray"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -19,11 +19,32 @@
         <Setter Property="Height" Value="24"/>
         <Setter Property="Width" Value="200"/>
         <Setter Property="Margin" Value="0 6 0 0"/>
-        <Setter Property="Foreground" Value="#36047F"/>
+        <Setter Property="Foreground" Value="DarkGray"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="MaxLength" Value="12"/>
         
     </Style>
+
+    <Style x:Key="MoneyTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontFamily" Value="JetBrains Mono"/>
+    </Style>
+
+    <Style x:Key="SellingEnterTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Padding" Value="10 2"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="ExtraBold"/>
+        <Setter Property="FontFamily" Value="JetBrains Mono"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="350"/>
+    </Style>
+
 </ResourceDictionary>

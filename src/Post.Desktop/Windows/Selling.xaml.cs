@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Post.Desktop.Windows
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for Selling.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Selling : Window
     {
-        public Login()
+        public Selling()
         {
             InitializeComponent();
         }
@@ -27,11 +27,6 @@ namespace Post.Desktop.Windows
         private void btnShutDown(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void btnShowBtn(object sender, RoutedEventArgs e)
-        {
-            Console.WriteLine("d");
         }
     }
 }
