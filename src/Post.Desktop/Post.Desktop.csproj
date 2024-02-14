@@ -16,18 +16,21 @@
     <None Remove="Assets\Images\login.png" />
     <None Remove="Assets\Images\login_bg.jpg" />
     <None Remove="Assets\Images\logout_left.png" />
+    <None Remove="Assets\Images\pay_loan.png" />
+    <None Remove="Assets\Images\printer.png" />
     <None Remove="Assets\Images\rbox.png" />
     <None Remove="Assets\Images\receipt.png" />
     <None Remove="Assets\Images\refresh.png" />
     <None Remove="Assets\Images\search.png" />
     <None Remove="Assets\Images\settings.png" />
+    <None Remove="Assets\Images\translate.png" />
     <None Remove="Assets\Images\user.png" />
     <None Remove="Assets\Images\users.png" />
+    <None Remove="Assets\Images\xclose.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Components\" />
-    <Folder Include="Pages\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,13 +41,17 @@
     <Resource Include="Assets\Images\login.png" />
     <Resource Include="Assets\Images\login_bg.jpg" />
     <Resource Include="Assets\Images\logout_left.png" />
+    <Resource Include="Assets\Images\pay_loan.png" />
+    <Resource Include="Assets\Images\printer.png" />
     <Resource Include="Assets\Images\rbox.png" />
     <Resource Include="Assets\Images\receipt.png" />
     <Resource Include="Assets\Images\refresh.png" />
     <Resource Include="Assets\Images\search.png" />
     <Resource Include="Assets\Images\settings.png" />
+    <Resource Include="Assets\Images\translate.png" />
     <Resource Include="Assets\Images\user.png" />
     <Resource Include="Assets\Images\users.png" />
+    <Resource Include="Assets\Images\xclose.png" />
   </ItemGroup>
 
 </Project>

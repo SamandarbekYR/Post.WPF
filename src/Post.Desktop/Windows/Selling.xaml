@@ -17,7 +17,6 @@
             <ColumnDefinition Width="2.5*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
         <Grid Grid.Column="0" 
               Margin="10">
             <Grid.RowDefinitions>
@@ -222,24 +221,25 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.2*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="1.1*"/>
+                    <ColumnDefinition Width="1.2*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border Grid.Column="0"
-                        Margin="0 2 0 2">
+                        Margin="0 4 0 7">
                        <Button Style="{DynamicResource SellingExitButton}">
                        </Button>
                 </Border>
                 <Border Grid.Column="1" 
-                        Margin="0 2 0 2">
-                    <Button Style="{DynamicResource SellingSettingButton}">
+                        Margin="0 4 0 7">
+                    <Button Style="{DynamicResource SellingSettingButton}"
+                            Click="btnSettings">
                     </Button>
                 </Border>
                     <Border Grid.Column="2" CornerRadius="6" 
                             Background="White" 
-                            Margin="0 2 0 2">
+                            Margin="0 4 0 7">
                     <StackPanel Margin="10"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
@@ -251,12 +251,13 @@
                     </StackPanel>
                 </Border>
                 <Border Grid.Column="3"
-                        Margin="0 2 0 2">
-                    <Button Style="{DynamicResource SellingBuyersButton}">
+                        Margin="0 4 0 7">
+                    <Button Style="{DynamicResource SellingBuyersButton}"
+                            Click="btnBuyers">
                     </Button>
                 </Border>
                 <Border Grid.Column="4"
-                        Margin="0 2 0 2">
+                        Margin="0 4 0 7">
                     <Button Style="{DynamicResource SellingPaymentNationButton}">
                     </Button>
                 </Border>
@@ -309,12 +310,12 @@
             <Grid Grid.Row="2" 
                   Margin="10,0,10,0">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="0.9*"/>
                     <RowDefinition Height="1.0*"/>
                     <RowDefinition Height="1.0*"/>
-                    <RowDefinition Height="1.0*"/>
-                    <RowDefinition Height="1.0*"/>
-                    <RowDefinition Height="1.1*"/>
-                    <RowDefinition Height="1.1*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0"
                       Margin="0 0 0 8">

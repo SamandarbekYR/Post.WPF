@@ -81,6 +81,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+   
     <Style x:Key="LockLoginBtn" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Height" Value="40"/>
@@ -110,6 +111,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="PhoneNumIcon" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Height" Value="40"/>
@@ -133,8 +135,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="SellingExitButton" TargetType="{x:Type Button}">
         <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -156,8 +160,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="SellingSettingButton" TargetType="{x:Type Button}">
         <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -169,7 +175,7 @@
                                 Stretch="Uniform"
                                 Width="30"/>
                             <TextBlock Style="{DynamicResource MoneyLabel}"
-                                    Text="Exit"
+                                    Text="Settings"
                                     Margin="10 0"
                                     Foreground="White">
                             </TextBlock>
@@ -179,8 +185,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="SellingBuyersButton" TargetType="{x:Type Button}">
         <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -205,6 +213,7 @@
 
     <Style x:Key="SellingPaymentNationButton" TargetType="{x:Type Button}">
         <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -229,6 +238,7 @@
 
     <Style x:Key="SellingNumberThreeZero" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -250,6 +260,7 @@
 
     <Style x:Key="SellingNumberZero" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Margin" Value="5 0"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -272,6 +283,7 @@
 
     <Style x:Key="SellingNumberOne" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -293,6 +305,7 @@
 
     <Style x:Key="SellingNumberTwo" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -314,6 +327,7 @@
 
     <Style x:Key="SellingNumberThree" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -335,6 +349,7 @@
 
     <Style x:Key="SellingNumberFour" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -355,6 +370,7 @@
 
     <Style x:Key="SellingNumberFive" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -376,6 +392,7 @@
 
     <Style x:Key="SellingNumberSix" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -398,6 +415,7 @@
 
     <Style x:Key="SellingNumberSeven" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -419,6 +437,7 @@
 
     <Style x:Key="SellingNumberEight" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -440,6 +459,7 @@
 
     <Style x:Key="SellingNumberNine" TargetType="{x:Type Button}">
         <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -460,6 +480,7 @@
     </Style>
 
     <Style x:Key="SellingScanning" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -483,6 +504,7 @@
     </Style>
 
     <Style x:Key="SellingSelling" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -506,6 +528,7 @@
     </Style>
 
     <Style x:Key="SellingRefresh" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -528,6 +551,7 @@
     </Style>
 
     <Style x:Key="SellingSearch" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -551,6 +575,7 @@
     </Style>
 
     <Style x:Key="SellingNation" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -574,6 +599,7 @@
     </Style>
 
     <Style x:Key="SellingReturn" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -597,6 +623,7 @@
     </Style>
 
     <Style x:Key="SellingLeft" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -608,6 +635,26 @@
                                    Source="/Assets/Images/left.png"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SettingXClose" TargetType="{x:Type Button}">
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Background="#cf0018"
+                            BorderBrush="#cf0018"
+                            CornerRadius="50"
+                            Padding="10">
+                        <Image Source="/Assets/Images/xclose.png" Stretch="Uniform"
+                               Height="25"
+                               Width="25"
+                               />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

@@ -1,0 +1,121 @@
+﻿<Window x:Class="Post.Desktop.Windows.Loan"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Post.Desktop.Windows"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Loan">
+
+    <StackPanel Orientation="Vertical">
+        <Grid Margin="0,5,0,10">
+            <TextBlock Text="Buyers"
+                    FontSize="22"
+                    Margin="20,10"/>
+            <TextBox Text="Search ..."
+                   Width="300" Margin="10"
+                   FontSize="16"
+                  />
+            <Button Content="NewAdd"
+                 BorderBrush="Transparent"
+                 BorderThickness="0"
+                 Background="#22c55e"
+                 HorizontalAlignment="Right"
+                 Margin="20,10"/>
+        </Grid>
+        <Grid Grid.Row="1"
+                              Margin="10,10"
+                          >
+            <DataGrid x:Name="customers_table"
+                   AutoGenerateColumns="False"
+                   CanUserAddRows="false"
+                   Background="#fff"
+                   CanUserDeleteRows="False"
+                   Height="530"
+                   IsReadOnly="True"
+                   ScrollViewer.CanContentScroll="True" 
+                   ScrollViewer.VerticalScrollBarVisibility="Auto"
+                   ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <!-- <materialDesign:DataGridTextColumn Header="Id"
+                                                        FontSize="16"
+                                                        Width="0.6*"
+                                                        Binding="{Binding Id}"/>
+                 -->
+                    <DataGridTemplateColumn Width="0.6*" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="Id"
+                                        FontSize="16"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!-- <materialDesign:DataGridTextColumn Header="Ism Familiya"
+                                                        Binding="{Binding FullName}"
+                                                        FontSize="16"
+                                                        Width="1.3*"/>
+                 -->
+                    <DataGridTemplateColumn Width="1.3*">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="FullName"
+                                        FontSize="16"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!--<materialDesign:DataGridTextColumn Header="Tel raqam"
+                                                        FontSize="16"
+                                                        Width="0.7*"
+                                                        Binding="{Binding PhoneNumber}"/>
+                  -->
+                    <DataGridTemplateColumn Width="0.7*">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="PhoneNumber"
+                                        FontSize="16">
+
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="Choose"
+                                        FontSize="16">
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Padding="10, 5,2,5"
+                                         FontSize="15"
+                                         Margin="10,0"
+                                         BorderBrush="Transparent"
+                                         BorderThickness="0"
+                                         Background="#66b032"
+                                        
+                                         >
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/Assets/Images/pay_loan.png"/>
+                                            <TextBlock Text="Tanlash"
+                                                        Margin="10,0"
+                                                        VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </Grid>
+    </StackPanel>
+</Window>

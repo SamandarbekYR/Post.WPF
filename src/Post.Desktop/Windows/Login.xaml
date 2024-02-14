@@ -19,11 +19,13 @@
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid Margin="10">
+            <Border    VerticalAlignment="Center"
+                        Margin="15 10"
+                        HorizontalAlignment="Right">
                 <Button Style="{DynamicResource LoginShutDownButton}"
                         Click="btnShutDown">
                 </Button>
-            </Grid>
+            </Border>
             <StackPanel Grid.Row="1"
                         VerticalAlignment="Center">
                 <Border CornerRadius="25"

@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using System.Windows.Media.Effects;
 
 namespace Post.Desktop.Windows
 {
@@ -27,6 +16,26 @@ namespace Post.Desktop.Windows
         private void btnShutDown(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+        public void ShowMealOrdersWindow()
+        {
+            BlurEffect blur = new BlurEffect();
+            blur.Radius = 15; // You can adjust the blur radius as needed
+            Effect = blur;
+        }
+
+        private void btnSettings(object sender, RoutedEventArgs e)
+        {
+            Settings settings = new Settings();
+            ShowMealOrdersWindow();
+            settings.ShowDialog();
+            Effect = null;
+        }
+
+        private void btnBuyers(object sender, RoutedEventArgs e)
+        {
+            Loan loan = new Loan();
+            loan.ShowDialog();
         }
     }
 }
