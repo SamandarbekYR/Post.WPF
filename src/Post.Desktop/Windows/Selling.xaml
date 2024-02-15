@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Post.Desktop.Windows"
         mc:Ignorable="d"
-        Title="Selling" Height="768" Width="1366"
+        Title="Selling" Height="768" Width="1367"
         Background="Transparent"
         AllowsTransparency="True"
         ResizeMode="NoResize" 
@@ -42,8 +42,12 @@
                                 CornerRadius="12" 
                                 Background="White">
                             <StackPanel Margin="8">
-                                <TextBox Style="{DynamicResource MoneyTextBox}"
-                                         Text="0">
+                                
+                                <TextBox 
+                                    x:Name="naqd"
+                                    GotFocus="tb_Gotfokus"
+                                    Style="{DynamicResource MoneyTextBox}"
+                                    Text="0">
                                 </TextBox>
                                 <Border  HorizontalAlignment="Left"
                                          Style="{DynamicResource LoginBorder}"
@@ -62,8 +66,10 @@
                                 CornerRadius="12" 
                                 Background="White">
                             <StackPanel Margin="8">
-                                <TextBox Style="{DynamicResource MoneyTextBox}"
-                                         Text="0">
+                                <TextBox 
+                                    x:Name="plastik"
+                                    Style="{DynamicResource MoneyTextBox}"
+                                    Text="0">
                                 </TextBox>
                                 <Border HorizontalAlignment="Left"
                                         Style="{DynamicResource LoginBorder}"
@@ -82,8 +88,10 @@
                                 CornerRadius="12" 
                                 Background="White">
                             <StackPanel Margin="8">
-                                <TextBox Style="{DynamicResource MoneyTextBox}"
-                                         Text="0">
+                                <TextBox 
+                                    x:Name="chegirma"
+                                    Style="{DynamicResource MoneyTextBox}"
+                                    Text="0">
                                 </TextBox>
                                 <Border HorizontalAlignment="Left"
                                         Style="{DynamicResource LoginBorder}"
@@ -234,7 +242,8 @@
                 </Border>
                 <Border Grid.Column="1" 
                         Margin="0 2 0 2">
-                    <Button Style="{DynamicResource SellingSettingButton}">
+                    <Button 
+                        Style="{DynamicResource SellingSettingButton}">
                     </Button>
                 </Border>
                     <Border Grid.Column="2" CornerRadius="6" 
@@ -284,7 +293,7 @@
                            Stretch="Uniform"/>
                 </Grid>
                   <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                            <TextBlock Text="Samandarbek Yigitaliyev"
+                            <TextBlock Text="Shodiyor Erqo'ziyev"
                                        FontSize="16"
                                        FontWeight="Bold"/>
                             <TextBlock Text="Seller"
@@ -302,7 +311,9 @@
                         Margin="10 10"
                         BorderThickness="0"
                         Background="White">
-                    <TextBox Margin="5" Style="{DynamicResource SellingEnterTextBox}">
+                    <TextBox
+                        x:Name="barcode_input"
+                        Margin="5" Style="{DynamicResource SellingEnterTextBox}">
                     </TextBox>
                 </Border>
             </Grid>
@@ -323,18 +334,25 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                            <Border Grid.Column="0" 
-                                    Margin="0 0 4 0">
-                               <Button Style="{DynamicResource SellingNumberSeven}"/>
-                             </Border>
-                            <Border Grid.Column="1"
-                                    Margin="2 0 2 0">
-                                <Button Style= "{DynamicResource SellingNumberEight}"/>
-                            </Border>
-                            <Border Grid.Column="2"
-                                    Margin="4 0 0 0">
-                                <Button Style="{DynamicResource SellingNumberNine}"/>
-                            </Border>
+
+                    <Button
+                        Margin="0 0 4 0"
+                        Grid.Column="0"
+                        Content="7"
+                        Click="Numbers_Button_Click"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                        Margin="2 0 2 0"
+                        Grid.Column="1"
+                        Content="8"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                        Margin="4 0 0 0"
+                        Grid.Column="2"
+                        Content="9"
+                        Style="{DynamicResource SellingNumberOne}"/>
+
+
                 </Grid>
                 <Grid Grid.Row="1"
                       Margin="0 0 0 8">
@@ -343,18 +361,23 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" 
-                            Margin="0 0 4 0">
-                        <Button Style="{DynamicResource SellingNumberFour}"/>
-                    </Border>
-                    <Border Grid.Column="1"
-                            Margin="2 0 2 0">
-                        <Button Style= "{DynamicResource SellingNumberFive}"/>
-                    </Border>
-                    <Border Grid.Column="2"
-                            Margin="4 0 0 0">
-                        <Button Style="{DynamicResource SellingNumberSix}"/>
-                    </Border>
+
+                    <Button
+                        Margin="0 0 4 0"
+                        Grid.Column="0"
+                        Content="4"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                        Margin="2 0 2 0"
+                        Grid.Column="1"
+                        Content="5"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                        Margin="4 0 0 0"
+                        Grid.Column="2"
+                        Content="6"
+                        Style="{DynamicResource SellingNumberOne}"/>
+
                 </Grid>
                 <Grid Grid.Row="2"
                       Margin="0 0 0 8">
@@ -363,18 +386,23 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" 
-                            Margin="0 0 4 0">
-                        <Button Style="{DynamicResource SellingNumberOne}"/>
-                    </Border>
-                    <Border Grid.Column="1"
-                            Margin="2 0 2 0">
-                        <Button Style= "{DynamicResource SellingNumberTwo}"/>
-                    </Border>
-                    <Border Grid.Column="2"
-                            Margin="4 0 0 0">
-                        <Button Style="{DynamicResource SellingNumberThree}"/>
-                    </Border>
+
+                    <Button
+                        Margin="0 0 4 0"
+                        Grid.Column="0"
+                        Content="1"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                        Margin="2 0 2 0"
+                        Grid.Column="1"
+                        Content="2"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                        Margin="4 0 0 0"
+                        Grid.Column="2"
+                        Content="3"
+                        Style="{DynamicResource SellingNumberOne}"/>
+
                 </Grid>
                 <Grid Grid.Row="3"
                       Margin="0 0 0 8">
@@ -383,18 +411,20 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" 
-                            Margin="0 0 4 0">
-                        <Button Style="{DynamicResource SellingNumberThree}"/>
-                    </Border>
-                    <Border Grid.Column="1"
-                            Margin="2 0 2 0">
-                        <Button Style= "{DynamicResource SellingNumberThreeZero}"/>
-                    </Border>
-                    <Border Grid.Column="2"
-                            Margin="4 0 0 0">
-                        <Button Style="{DynamicResource SellingLeft}"/>
-                    </Border>
+                    <Button
+                        Margin="0 0 4 0"
+                        Grid.Column="0"
+                        Content="0"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                        Margin="2 0 2 0"
+                        Grid.Column="1"
+                        Content="000"
+                        Style="{DynamicResource SellingNumberOne}"/>
+                    <Button
+                            Grid.Column="2"
+                            Margin="4 0 0 0"
+                            Style="{DynamicResource SellingLeft}"/>
                 </Grid>
                 <Grid Grid.Row="4"
                       Margin="0 0 0 8">

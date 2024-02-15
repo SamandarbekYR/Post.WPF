@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Desktop.DTOs\Desktop.DTOs.csproj" />
+    <ProjectReference Include="..\Post.ViewModels\Post.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
