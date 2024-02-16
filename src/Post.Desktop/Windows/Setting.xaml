@@ -1,0 +1,143 @@
+﻿<Window x:Class="Post.Desktop.Windows.Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Setting" 
+        Height="500" 
+        Width="800" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel 
+            Grid.Row="0" 
+            Orientation="Horizontal" 
+            Background="#3f51b5">
+            <StackPanel 
+                Orientation="Horizontal" 
+                Width="740"
+                HorizontalAlignment="Left">
+                <StackPanel>
+                    <StackPanel 
+                        Orientation="Horizontal" 
+                        VerticalAlignment="Top" 
+                        Margin="10 0">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="5"/>
+                            </Grid.RowDefinitions>
+
+                            <Button 
+                                Grid.Row="0"
+                                Width="170"
+                                Height="50" 
+                                Background="{x:Null}" 
+                                BorderBrush="{x:Null}"  
+                                Click="Language_Button_Click">
+
+                                <StackPanel 
+                                    Orientation="Horizontal">
+
+                                    <Image 
+                                        Height="24" 
+                                        Margin="0,0,10,0" 
+                                        Source="/Assets/Images/translate.png"/>
+                                    <TextBlock
+                                        FontSize="16"
+                                        FontWeight="SemiBold"
+                                        Foreground="White"
+                                        Text="{DynamicResource ChangeTheLanguage}"
+                                        VerticalAlignment="Center"/>
+
+                                </StackPanel>
+
+                            </Button>
+
+                            <Border
+                                Name="LangCursorBorder"
+                                Grid.Row="1"
+                                Background="Transparent"/>
+
+                        </Grid>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="5"/>
+                            </Grid.RowDefinitions>
+
+                            <Button 
+                                Grid.Row="0"
+                                Width="170"
+                                Height="50" 
+                                Background="Transparent" 
+                                BorderBrush="{x:Null}"  
+                                Click="Printer_Button_Click">
+
+                                <StackPanel 
+                                    Orientation="Horizontal">
+
+                                    <Image 
+                                        Height="24" 
+                                        Margin="0,0,10,0" 
+                                        Source="/Assets/Images/printer.png"/>
+
+                                    <TextBlock 
+                                        FontSize="16"
+                                        FontWeight="SemiBold"
+                                        Foreground="White"
+                                        Text="{DynamicResource Printer}"
+                                        VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Border
+                                Name="PrinterCursorBorder"
+                                Grid.Row="1"
+                                Background="Transparent"/>
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            
+                <Border Width="40" 
+                        Height="40" 
+                        CornerRadius="25"
+                        Background="#cf0018"
+                        >
+                    <Button 
+                        Height="35"
+                        Width="35"
+                        x:Name="close"
+                        Background="Transparent"
+                        Click="close_Click">
+
+                        <Image 
+                            Width="22"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Height="22"
+                            Source="/Assets/Images/xclose.png"/>
+
+                    </Button>
+
+                </Border>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Frame x:Name="PageNavigator" 
+                   NavigationUIVisibility="Hidden"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

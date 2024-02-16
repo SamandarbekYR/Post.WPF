@@ -462,7 +462,7 @@
                         BorderThickness="1"
                         BorderBrush="#cf0018"
                         Background="#cf0018">
-                            <Image Height="40" 
+                        <Image Height="40" 
                                    Source="/Assets/Images/left.png"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"/>
@@ -473,10 +473,10 @@
                             <Setter TargetName="BorderLeft" Property="Background" Value="#B40015"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
-                    
+
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    
+
 </ResourceDictionary>

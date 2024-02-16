@@ -9,6 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Components\**" />
+    <Compile Remove="Pages\**" />
+    <EmbeddedResource Remove="Components\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Components\**" />
+    <None Remove="Pages\**" />
+    <Page Remove="Components\**" />
+    <Page Remove="Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Assets\Images\barcode.png" />
     <None Remove="Assets\Images\close.png" />
     <None Remove="Assets\Images\debt.png" />
@@ -16,18 +27,25 @@
     <None Remove="Assets\Images\login.png" />
     <None Remove="Assets\Images\login_bg.jpg" />
     <None Remove="Assets\Images\logout_left.png" />
+    <None Remove="Assets\Images\printer.png" />
     <None Remove="Assets\Images\rbox.png" />
     <None Remove="Assets\Images\receipt.png" />
     <None Remove="Assets\Images\refresh.png" />
     <None Remove="Assets\Images\search.png" />
     <None Remove="Assets\Images\settings.png" />
+    <None Remove="Assets\Images\translate.png" />
     <None Remove="Assets\Images\user.png" />
     <None Remove="Assets\Images\users.png" />
+    <None Remove="Assets\Images\xclose.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Components\" />
-    <Folder Include="Pages\" />
+    <Resource Include="Assets\Images\printer.png" />
+    <Resource Include="Assets\Images\translate.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Haley.MVVM" Version="6.4.3.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +67,22 @@
     <Resource Include="Assets\Images\settings.png" />
     <Resource Include="Assets\Images\user.png" />
     <Resource Include="Assets\Images\users.png" />
+    <Resource Include="Assets\Images\xclose.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

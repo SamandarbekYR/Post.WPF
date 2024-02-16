@@ -237,12 +237,15 @@
 
                 <Border Grid.Column="0"
                         Margin="0 2 0 2">
-                       <Button Style="{DynamicResource SellingExitButton}">
+                       <Button 
+                           Click="Exit_Button_Click"
+                           Style="{DynamicResource SellingExitButton}">
                        </Button>
                 </Border>
                 <Border Grid.Column="1" 
                         Margin="0 2 0 2">
                     <Button 
+                        Click="Setting_Button_Click_1"
                         Style="{DynamicResource SellingSettingButton}">
                     </Button>
                 </Border>
