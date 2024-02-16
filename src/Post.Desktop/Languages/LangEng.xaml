@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <system:String x:Key="lang">Current language:</system:String>
+    <system:String x:Key="langs">Available languages</system:String>
+    <system:String x:Key="save">Save</system:String>
+    <system:String x:Key="uz">Uzbek</system:String>
+    <system:String x:Key="en">Engilish</system:String>
+    <system:String x:Key="ru">Russian</system:String>
+    <system:String x:Key="uz-kiril">Uzbek-Kril</system:String>
+    <system:String x:Key="ConnectedPrinter">Connected printer:</system:String>
+    <system:String x:Key="AvailablePrinters">Available printers:</system:String>
+    <system:String x:Key="Testing">Testing</system:String>
+    <system:String x:Key="ChangeTheLanguage">Change the language</system:String>
+    <system:String x:Key="Printer">Printer</system:String>
+    <system:String x:Key="Cash">Cash</system:String>
+    <system:String x:Key="PlasticCard">Plastic card</system:String>
+    <system:String x:Key="Discount">Discount</system:String>
+    <system:String x:Key="Sum">Sum</system:String>
+    <system:String x:Key="Barcode">Barscode</system:String>
+    <system:String x:Key="Name">Name</system:String>
+    <system:String x:Key="Produced">Produced</system:String>
+    <system:String x:Key="Cost">Cost</system:String>
+    <system:String x:Key="Quantity">Quantity</system:String>
+    <system:String x:Key="TotalCost">Total Cost</system:String>
+    <system:String x:Key="TurnOff">Turn off</system:String>
+    <system:String x:Key="Exit">Exit</system:String>
+    <system:String x:Key="Settings">Settings</system:String>
+    <system:String x:Key="Buyers">Buyers</system:String>
+    <system:String x:Key="PaymentNation">Payment of the nation</system:String>
+    <system:String x:Key="UnknownBuyer">Unknown buyer</system:String>
+    <system:String x:Key="Seller">Seller</system:String>
+    <system:String x:Key="Scanning">Scanning</system:String>
+    <system:String x:Key="Sell">Selling</system:String>
+    <system:String x:Key="Refresh">Refresh</system:String>
+    <system:String x:Key="Search">Search</system:String>
+    <system:String x:Key="Nation">Nation</system:String>
+    <system:String x:Key="Return">Return</system:String>
+    <system:String x:Key="Yes">Yes</system:String>
+    <system:String x:Key="No">No</system:String>
+    <system:String x:Key="Ok">Ok</system:String>
+    <system:String x:Key="Cancel">Cancel</system:String>
+    <system:String x:Key="Retry">Retry</system:String>
+    <system:String x:Key="Send">Send</system:String>
+    <system:String x:Key="PhoneNumber">Phone number</system:String>
+    <system:String x:Key="GetVerificationCode">Get a verification code:</system:String>
+    <system:String x:Key="BuyerInformation">Buyer information</system:String>
+    <system:String x:Key="FullName">Full name</system:String>
+    <system:String x:Key="Id">Id</system:String>
+    <system:String x:Key="Choose">Choose</system:String>
+    <system:String x:Key="Actions">Actions</system:String>
+    <system:String x:Key="LogIn">Log In</system:String>
+    <system:String x:Key="Password">Password</system:String>
+    <system:String x:Key="ForgotPassword">Forgot password</system:String>
+
+</ResourceDictionary>

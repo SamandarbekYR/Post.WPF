@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <system:String x:Key="lang">Жорий тил:</system:String>
+    <system:String x:Key="langs">Мавжуд тиллар</system:String>
+    <system:String x:Key="save">Сақлаш</system:String>
+    <system:String x:Key="uz">Ўзбек тили</system:String>
+    <system:String x:Key="en">Инглиз тили</system:String>
+    <system:String x:Key="ru">Рус тили</system:String>
+    <system:String x:Key="uz-kiril">Ўзбек-Крил</system:String>
+    <system:String x:Key="ConnectedPrinter">Уланган принтер:</system:String>
+    <system:String x:Key="AvailablePrinters">Мавжуд принтерлар:</system:String>
+    <system:String x:Key="Testing">Тестлаш</system:String>
+    <system:String x:Key="ChangeTheLanguage">Тилни ўзгартириш</system:String>
+    <system:String x:Key="Printer">Принтер</system:String>
+    <system:String x:Key="Cash">Нақд пул</system:String>
+    <system:String x:Key="PlasticCard">Пластик карта</system:String>
+    <system:String x:Key="Discount">Чегирма</system:String>
+    <system:String x:Key="Sum">Сумма</system:String>
+    <system:String x:Key="Barcode">Штрих-код</system:String>
+    <system:String x:Key="Name">Номи</system:String>
+    <system:String x:Key="Produced">Ишлаб чикарилган</system:String>
+    <system:String x:Key="Cost">Ишлаб чиқарилган</system:String>
+    <system:String x:Key="Quantity">Миқдор</system:String>
+    <system:String x:Key="TotalCost">Жами нархи</system:String>
+    <system:String x:Key="TurnOff">Ўчириш</system:String>
+    <system:String x:Key="Exit">Чиқиш</system:String>
+    <system:String x:Key="Settings">Созламалар</system:String>
+    <system:String x:Key="Buyers">Ҳаридорлар</system:String>
+    <system:String x:Key="PaymentNation">Насия тўлаш</system:String>
+    <system:String x:Key="UnknownBuyer">Номаълум ҳаридор</system:String>
+    <system:String x:Key="Seller">Сотувчи</system:String>
+    <system:String x:Key="Scanning">Сканерлаш</system:String>
+    <system:String x:Key="Sell">Сотиш</system:String>
+    <system:String x:Key="Refresh">Янгилаш</system:String>
+    <system:String x:Key="Search">Қидириш</system:String>
+    <system:String x:Key="Nation">Нация</system:String>
+    <system:String x:Key="Return">Қайтариш</system:String>
+    <system:String x:Key="Yes">Ха</system:String>
+    <system:String x:Key="No">Йок</system:String>
+    <system:String x:Key="Ok">Хорошо</system:String>
+    <system:String x:Key="Cancel">Бекор килиш</system:String>
+    <system:String x:Key="Retry">Кайта уруниш</system:String>
+    <system:String x:Key="Send">Юбориш</system:String>
+    <system:String x:Key="PhoneNumber">Телефон рақамингиз</system:String>
+    <system:String x:Key="GetVerificationCode">Тасдиқлаш кодини олиш:</system:String>
+    <system:String x:Key="BuyerInformation">Харидор малумотлари</system:String>
+    <system:String x:Key="FullName">Исм Фамилия</system:String>
+    <system:String x:Key="NewAdd">+ Янги қўшиш</system:String>
+    <system:String x:Key="Id">Ид</system:String>
+    <system:String x:Key="Choose">Танлаш</system:String>
+    <system:String x:Key="Actions">Харакатлар</system:String>
+    <system:String x:Key="LogIn">Парол</system:String>
+    <system:String x:Key="ForgotPassword">Паролни унутдингизми</system:String>
+
+</ResourceDictionary>
