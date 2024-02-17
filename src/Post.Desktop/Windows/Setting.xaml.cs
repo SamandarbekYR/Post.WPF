@@ -1,5 +1,4 @@
 ﻿using Post.Desktop.Pages;
-using System.Drawing.Printing;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;

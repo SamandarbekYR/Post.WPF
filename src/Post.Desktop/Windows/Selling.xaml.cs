@@ -1,6 +1,7 @@
 ﻿using Post.Desktop.Models;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace Post.Desktop.Windows;
 
@@ -8,11 +9,21 @@ namespace Post.Desktop.Windows;
 /// Interaction logic for Selling.xaml
 /// </summary>
 public partial class Selling : Window
-{
-    int activeTextboxIndex = 0;
+{ 
+    DispatcherTimer dispatcherTimer = new DispatcherTimer();
+
+
+    int activeTextboxIndex = 4;
     public Selling()
     {
+        dispatcherTimer.Tick += DispatcherTimer_Tick;
         InitializeComponent();
+    }
+
+    private void DispatcherTimer_Tick(object? sender, EventArgs e)
+    {
+        tb_Clock.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        date.Text = DateTime.Now.ToLongDateString();
     }
 
     private void btnShutDown(object sender, RoutedEventArgs e)
@@ -100,5 +111,30 @@ public partial class Selling : Window
         Application.Current.MainWindow.Opacity = 0.9;
         setting.ShowDialog();
         Application.Current.MainWindow.Opacity = 1;
+    }
+
+    private void remove_Btn_Click(object sender, RoutedEventArgs e)
+    {
+        switch (activeTextboxIndex)
+        {
+            case 1: CutText(ref naqd); break;
+            case 2: CutText(ref plastik); break;
+            case 3: CutText(ref chegirma); break;
+            case 4: CutText(ref barcode_input); break;
+        }
+    }
+
+
+
+    private void CutText(ref TextBox textbox)
+    {
+        if (textbox == null || textbox.Text.Length == 0) return;
+        if (textbox.Text.Length == 1)
+        {
+            textbox.Text = "";
+            return;
+        }
+
+        textbox.Text = textbox.Text.Substring(0, textbox.Text.Length - 1);
     }
 }
