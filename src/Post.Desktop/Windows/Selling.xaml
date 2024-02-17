@@ -37,8 +37,9 @@
                 <Border Grid.Column="0"
                         Margin="10,0">
                     <StackPanel  VerticalAlignment="Center">
-                        <TextBlock Text="Naqd pul"
-                                   Style="{DynamicResource MoneyLabel}"
+                        <TextBlock 
+                            Text="Naqd pul"
+                            Style="{DynamicResource MoneyLabel}"
                                    />
                         <Border Margin="0 10 0 0"
                                 CornerRadius="12" 
@@ -47,6 +48,8 @@
                                 
                                 <TextBox 
                                     x:Name="naqd"
+                                    Uid="1"
+                                    Width="200"
                                     GotFocus="tb_Gotfokus"
                                     Style="{DynamicResource MoneyTextBox}"
                                     Text="0">
@@ -69,7 +72,10 @@
                                 Background="White">
                             <StackPanel Margin="8">
                                 <TextBox 
+                                    Width="200"
+                                    Uid="2"
                                     x:Name="plastik"
+                                    GotFocus="tb_Gotfokus"
                                     Style="{DynamicResource MoneyTextBox}"
                                     Text="0">
                                 </TextBox>
@@ -91,7 +97,10 @@
                                 Background="White">
                             <StackPanel Margin="8">
                                 <TextBox 
+                                    Width="200"
+                                    Uid="3"
                                     x:Name="chegirma"
+                                    GotFocus="tb_Gotfokus"
                                     Style="{DynamicResource MoneyTextBox}"
                                     Text="0">
                                 </TextBox>
@@ -112,9 +121,12 @@
                                 CornerRadius="12" 
                                 Background="White">
                             <StackPanel Margin="8">
-                                <TextBox Style="{DynamicResource MoneyTextBox}"
-                                         Text="0">
+                                <TextBox
+                                    Width="200"
+                                    Style="{DynamicResource MoneyTextBox}"
+                                    Text="0">
                                 </TextBox>
+                                
                                 <Border HorizontalAlignment="Left"
                                         Style="{DynamicResource LoginBorder}"
                                         MinWidth="200"/>
@@ -228,13 +240,13 @@
                     </DataGrid>
                 </Grid>
         </Border>
-            <Grid Grid.Row="2" Margin="0,10,5,5">
+            <Grid Grid.Row="2" Margin="0,10 0 5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.5*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="1.1*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border Grid.Column="0"
@@ -279,10 +291,10 @@
         <Grid Grid.Column="2"
               Background="Transparent">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="2.5*"/>
-                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.4*"/>
+                <RowDefinition Height="2.3*"/>
+                <RowDefinition Height="0.4*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0"
                   Background="White" 
@@ -306,24 +318,29 @@
                         </StackPanel>
                 <Border Grid.Column="2"
                         Margin="10 8 10 10">
-                    <Button Style="{DynamicResource LoginShutDownButton}"
-                            Click="btnShutDown">
+                    <Button 
+                        Width="55"
+                        Height="55"
+                        Style="{DynamicResource LoginShutDownButton}"
+                        Click="btnShutDown">
                     </Button>
                 </Border>
             </Grid>
             <Grid Grid.Row="1">
                 <Border CornerRadius="6" 
                         Margin="10 10"
-                        BorderThickness="0"
                         Background="White">
                     <TextBox
                         x:Name="barcode_input"
-                        Margin="5" Style="{DynamicResource SellingEnterTextBox}">
+                        Uid="4"
+                        Margin="10"
+                        GotFocus="tb_Gotfokus"
+                        Style="{DynamicResource SellingEnterTextBox}">
                     </TextBox>
                 </Border>
             </Grid>
             <Grid Grid.Row="2" 
-                  Margin="10,0,10,0">
+                  Margin="10 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1.0*"/>
                     <RowDefinition Height="1.0*"/>
@@ -344,17 +361,22 @@
                         Margin="0 0 4 0"
                         Grid.Column="0"
                         Content="7"
+                        Uid="7"
                         Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
                         Margin="2 0 2 0"
                         Grid.Column="1"
                         Content="8"
+                        Uid="8"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
                         Margin="4 0 0 0"
                         Grid.Column="2"
                         Content="9"
+                        Uid="9"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
 
 
@@ -371,16 +393,22 @@
                         Margin="0 0 4 0"
                         Grid.Column="0"
                         Content="4"
+                        Uid="4"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
                         Margin="2 0 2 0"
                         Grid.Column="1"
                         Content="5"
+                        Uid="5"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
                         Margin="4 0 0 0"
                         Grid.Column="2"
                         Content="6"
+                        Uid="6"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
 
                 </Grid>
@@ -396,16 +424,22 @@
                         Margin="0 0 4 0"
                         Grid.Column="0"
                         Content="1"
+                        Uid="1"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
                         Margin="2 0 2 0"
                         Grid.Column="1"
                         Content="2"
+                        Uid="2"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
                         Margin="4 0 0 0"
                         Grid.Column="2"
                         Content="3"
+                        Uid="3"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
 
                 </Grid>
@@ -420,16 +454,22 @@
                         Margin="0 0 4 0"
                         Grid.Column="0"
                         Content="0"
+                        Uid="0"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
                         Margin="2 0 2 0"
                         Grid.Column="1"
                         Content="000"
+                        Uid="10"
+                        Click="Numbers_Button_Click"
                         Style="{DynamicResource SellingNumberOne}"/>
                     <Button
-                            Grid.Column="2"
-                            Margin="4 0 0 0"
-                            Style="{DynamicResource SellingLeft}"/>
+                        Name="remove_Btn"
+                        Grid.Column="2"
+                        Margin="4 0 0 0"
+                        Click="remove_Btn_Click"
+                        Style="{DynamicResource SellingLeft}"/>
                 </Grid>
                 <Grid Grid.Row="4"
                       Margin="0 0 0 8">
@@ -472,17 +512,17 @@
                     </Border>
                 </Grid>
             </Grid>
-            <Grid Grid.Row="3" 
-                  Margin="10 5 10 15"
-                  Background="White">
-                <StackPanel Orientation="Vertical"  
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Margin="2">
-                    <StackPanel Orientation="Horizontal" 
+            <Border 
+                Grid.Row="3" 
+                CornerRadius="6"
+                Margin="10 5 10 15"
+                Background="White">
+                
+                    <StackPanel Orientation="Vertical" 
                                 VerticalAlignment="Center">
                         <TextBlock Text="14:13"
                                    FontSize="30"
+                                   Name="tb_Clock"
                                    FontWeight="Bold"
                                    HorizontalAlignment="Center"
                                    />
@@ -494,8 +534,7 @@
                                    VerticalAlignment="Bottom"
                                    Margin="10 0 0 0"/>
                     </StackPanel>
-                </StackPanel>
-            </Grid>
+            </Border>
         </Grid>
     </Grid>
 </Window>
