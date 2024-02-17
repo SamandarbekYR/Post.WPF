@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="/Styles/Border/BorderStyles.xaml"/>
 
                 <ResourceDictionary Source="/Assets/Icons/IconPath.xaml"/>
+                <ResourceDictionary Source="/Languages/LangUzb.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

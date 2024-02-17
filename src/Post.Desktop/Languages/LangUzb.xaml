@@ -8,7 +8,7 @@
     <system:String x:Key="uz">O'zbek tili</system:String>
     <system:String x:Key="en">Ingliz tili</system:String>
     <system:String x:Key="ru">Rus tili</system:String>
-    <system:String x:Key="uz-kiril">Ўзбекча</system:String>
+    <system:String x:Key="uz-kiril">O'zbek-Kril</system:String>
     <system:String x:Key="ConnectedPrinter">Ulangan printer:</system:String>
     <system:String x:Key="AvailablePrinters">Mavjud printerlar:</system:String>
     <system:String x:Key="Testing">Testlash</system:String>
