@@ -14,7 +14,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="7.5*"/>
         </Grid.RowDefinitions>
 
         <StackPanel 
@@ -33,34 +33,16 @@
 
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="50"/>
-                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="53"/>
+                                <RowDefinition Height="7"/>
                             </Grid.RowDefinitions>
 
                             <Button 
+                                Uid="0"
                                 Grid.Row="0"
-                                Width="170"
-                                Height="50" 
-                                Background="{x:Null}" 
-                                BorderBrush="{x:Null}"  
-                                Click="Language_Button_Click">
-
-                                <StackPanel 
-                                    Orientation="Horizontal">
-
-                                    <Image 
-                                        Height="24" 
-                                        Margin="0,0,10,0" 
-                                        Source="/Assets/Images/translate.png"/>
-                                    <TextBlock
-                                        FontSize="16"
-                                        FontWeight="SemiBold"
-                                        Foreground="White"
-                                        Text="{DynamicResource ChangeTheLanguage}"
-                                        VerticalAlignment="Center"/>
-
-                                </StackPanel>
-
+                                Style="{DynamicResource SettingLanguageButton}"  
+                                Click="Button_Click">
+                                
                             </Button>
 
                             <Border
@@ -72,33 +54,16 @@
 
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="50"/>
-                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="53"/>
+                                <RowDefinition Height="7"/>
                             </Grid.RowDefinitions>
 
                             <Button 
+                                Uid="1"
                                 Grid.Row="0"
-                                Width="170"
-                                Height="50" 
-                                Background="Transparent" 
-                                BorderBrush="{x:Null}"  
-                                Click="Printer_Button_Click">
+                                Style="{DynamicResource SettingPrinterButton}"
+                                Click="Button_Click">
 
-                                <StackPanel 
-                                    Orientation="Horizontal">
-
-                                    <Image 
-                                        Height="24" 
-                                        Margin="0,0,10,0" 
-                                        Source="/Assets/Images/printer.png"/>
-
-                                    <TextBlock 
-                                        FontSize="16"
-                                        FontWeight="SemiBold"
-                                        Foreground="White"
-                                        Text="{DynamicResource Printer}"
-                                        VerticalAlignment="Center"/>
-                                </StackPanel>
                             </Button>
                             <Border
                                 Name="PrinterCursorBorder"
@@ -108,29 +73,11 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-            
-                <Border Width="40" 
-                        Height="40" 
-                        CornerRadius="25"
-                        Background="#cf0018"
-                        >
-                    <Button 
-                        Height="35"
-                        Width="35"
-                        x:Name="close"
-                        Background="Transparent"
-                        Click="close_Click">
 
-                        <Image 
-                            Width="22"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                            Height="22"
-                            Source="/Assets/Images/xclose.png"/>
+            <Button
+                Click="close_Click"
+                Style="{DynamicResource ClosedButton}"/>
 
-                    </Button>
-
-                </Border>
         </StackPanel>
 
         <Grid Grid.Row="1">

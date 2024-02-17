@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using Post.Desktop.Pages;
+using System.Drawing.Printing;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Post.Desktop.Windows;
 
@@ -10,20 +14,32 @@ public partial class Setting : Window
     public Setting()
     {
         InitializeComponent();
+        LangCursorBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("White"));
+        PageNavigator.Content = new SettingLanguagePage();
     }
 
-    private void Printer_Button_Click(object sender, RoutedEventArgs e)
+    private void Button_Click(object sender, RoutedEventArgs e)
     {
+        int index = int.Parse(((Button)e.Source).Uid);
 
+
+        switch (index)
+        {
+            case 0:
+                PrinterCursorBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
+                LangCursorBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("White"));
+                PageNavigator.Content = new SettingLanguagePage();
+                break;
+            case 1:
+                LangCursorBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
+                PrinterCursorBorder.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("White"));
+                PageNavigator.Content = new SettingPrinterPage();
+                break;
+        }
     }
 
     private void close_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
-    }
-
-    private void Language_Button_Click(object sender, RoutedEventArgs e)
-    {
-
     }
 }
