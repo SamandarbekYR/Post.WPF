@@ -127,8 +127,6 @@ public partial class Selling : Window
         }
     }
 
-
-
     private void CutText(ref TextBox textbox)
     {
         if (textbox == null || textbox.Text.Length == 0) return;
@@ -145,5 +143,11 @@ public partial class Selling : Window
     {
         Buyers buyers = new Buyers();
         buyers.ShowDialog();
+    }
+
+    private void nation_Button_Click(object sender, RoutedEventArgs e)
+    {
+        NationWindow nationWindow = new NationWindow();
+        nationWindow.ShowDialog();
     }
 }

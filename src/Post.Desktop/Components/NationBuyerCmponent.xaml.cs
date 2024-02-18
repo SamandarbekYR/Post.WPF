@@ -5,15 +5,14 @@ using System.Windows.Media;
 namespace Post.Desktop.Components;
 
 /// <summary>
-/// Interaction logic for BuyerComponent.xaml
+/// Interaction logic for NationBuyerCmponent.xaml
 /// </summary>
-public partial class BuyerComponent : UserControl
+public partial class NationBuyerCmponent : UserControl
 {
-    public BuyerComponent()
+    public NationBuyerCmponent()
     {
         InitializeComponent();
     }
-
     private void Border_MouseEnter(object sender, MouseEventArgs e)
     {
         buyer_Border.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ECECEC"));
@@ -24,7 +23,7 @@ public partial class BuyerComponent : UserControl
         buyer_Border.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
     }
 
-    private void Choose_Button_Click(object sender, System.Windows.RoutedEventArgs e)
+    private void Payment_Button_Click(object sender, System.Windows.RoutedEventArgs e)
     {
 
     }

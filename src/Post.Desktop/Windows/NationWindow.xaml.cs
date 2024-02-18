@@ -5,15 +5,14 @@ using System.Windows.Media;
 namespace Post.Desktop.Windows;
 
 /// <summary>
-/// Interaction logic for Buyers.xaml
+/// Interaction logic for NationWindow.xaml
 /// </summary>
-public partial class Buyers : Window
+public partial class NationWindow : Window
 {
-    public Buyers()
+    public NationWindow()
     {
         InitializeComponent();
     }
-
     private void close_Button_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
@@ -43,9 +42,8 @@ public partial class Buyers : Window
     {
         for (int i = 0; i < 20; i++)
         {
-            BuyerComponent buyerComponent = new BuyerComponent();
-            stp_Buyers.Children.Add(buyerComponent);
+            NationBuyerCmponent nationBuyerCmponent = new NationBuyerCmponent();
+            stp_Buyers.Children.Add(nationBuyerCmponent);
         }
     }
-
 }

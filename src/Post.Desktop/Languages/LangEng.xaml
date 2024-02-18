@@ -49,7 +49,7 @@
     <system:String x:Key="FullName">Full name</system:String>
     <system:String x:Key="Id">Id</system:String>
     <system:String x:Key="Choose">Choose</system:String>
-    <system:String x:Key="Actions">Actions</system:String>
+    <system:String x:Key="Pay">Pay</system:String>
     <system:String x:Key="LogIn">Log In</system:String>
     <system:String x:Key="Password">Password</system:String>
     <system:String x:Key="ForgotPassword">Forgot password</system:String>

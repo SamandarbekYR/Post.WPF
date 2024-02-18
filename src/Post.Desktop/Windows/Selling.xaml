@@ -289,6 +289,7 @@
                     Grid.Column="4"
                     Margin="0 2 0 2">
                     <Button 
+                        Click="nation_Button_Click"
                         Style="{DynamicResource SellingPaymentNationButton}">
                     </Button>
                 </Border>
