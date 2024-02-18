@@ -7,6 +7,7 @@
     <system:String x:Key="save">Сохранять</system:String>
     <system:String x:Key="uz">Узбекский</system:String>
     <system:String x:Key="en">Английский</system:String>
+    <system:String x:Key="no">Ho.</system:String>
     <system:String x:Key="ru">Русскый</system:String>
     <system:String x:Key="uz-kiril">Ўзбек-Крил</system:String>
     <system:String x:Key="ConnectedPrinter">Подключенный принтер:</system:String>
@@ -50,7 +51,7 @@
     <system:String x:Key="NewAdd">+ Добавить новое</system:String>
     <system:String x:Key="Id">Ид</system:String>
     <system:String x:Key="Choose">Выбирать</system:String>
-    <system:String x:Key="Pay">Платить</system:String>
+    <system:String x:Key="Pay">Оплата</system:String>
     <system:String x:Key="LogIn">АВТОРИЗОВАТЬСЯ</system:String>
     <system:String x:Key="Password">Пароль</system:String>
     <system:String x:Key="ForgotPassword">Забыли пароль</system:String>

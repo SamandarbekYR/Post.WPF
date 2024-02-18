@@ -7,6 +7,7 @@
     <system:String x:Key="save">Saqlash</system:String>
     <system:String x:Key="uz">O'zbek tili</system:String>
     <system:String x:Key="en">Ingliz tili</system:String>
+    <system:String x:Key="no">No.</system:String>
     <system:String x:Key="ru">Rus tili</system:String>
     <system:String x:Key="uz-kiril">O'zbek-Kril</system:String>
     <system:String x:Key="ConnectedPrinter">Ulangan printer:</system:String>

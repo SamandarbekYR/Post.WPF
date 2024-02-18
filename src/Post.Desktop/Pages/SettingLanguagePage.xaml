@@ -35,7 +35,6 @@
                     Margin="0,0,0,10"/>
                 <ComboBox 
                     x:Name="languages"
-                    SelectionChanged="languages_SelectionChanged"
                     FontSize="16">
                     <ComboBoxItem Content="{DynamicResource uz}"/>
                     <ComboBoxItem Content="{DynamicResource en}"/>

@@ -1,4 +1,5 @@
 ﻿using Post.Desktop.Models;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
@@ -149,5 +150,39 @@ public partial class Selling : Window
     {
         NationWindow nationWindow = new NationWindow();
         nationWindow.ShowDialog();
+    }
+
+    private void scaner_Btn_Click(object sender, RoutedEventArgs e)
+    {
+        barcode_input.Focus();
+    }
+
+    private void print_Btn_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void refresh_Btn_Click(object sender, RoutedEventArgs e)
+    {
+        total.Text = "0";
+        naqd.Text = "0";
+        plastik.Text = "0";
+        chegirma.Text = "0";
+        barcode_input.Clear();
+    }
+
+    private void naqd_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+    {
+        e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+    }
+
+    private void naqd_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        SetTotalPrice();
+    }
+
+    private void nation_Click(object sender, RoutedEventArgs e)
+    {
+
     }
 }

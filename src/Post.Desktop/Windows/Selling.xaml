@@ -51,6 +51,8 @@
                                     Uid="1"
                                     Width="200"
                                     GotFocus="tb_Gotfokus"
+                                    TextChanged="naqd_TextChanged"
+                                    PreviewTextInput="naqd_PreviewTextInput"
                                     Style="{DynamicResource MoneyTextBox}"
                                     Text="0">
                                 </TextBox>
@@ -76,6 +78,8 @@
                                     Uid="2"
                                     x:Name="plastik"
                                     GotFocus="tb_Gotfokus"
+                                    TextChanged="naqd_TextChanged"
+                                    PreviewTextInput="naqd_PreviewTextInput"
                                     Style="{DynamicResource MoneyTextBox}"
                                     Text="0">
                                 </TextBox>
@@ -101,6 +105,8 @@
                                     Uid="3"
                                     x:Name="chegirma"
                                     GotFocus="tb_Gotfokus"
+                                    TextChanged="naqd_TextChanged"
+                                    PreviewTextInput="naqd_PreviewTextInput"
                                     Style="{DynamicResource MoneyTextBox}"
                                     Text="0">
                                 </TextBox>
@@ -122,6 +128,8 @@
                                 Background="White">
                             <StackPanel Margin="8">
                                 <TextBox
+                                    x:Name="total"
+                                    IsReadOnly="True"
                                     Width="200"
                                     Style="{DynamicResource MoneyTextBox}"
                                     Text="0">
@@ -496,15 +504,24 @@
                     </Grid.ColumnDefinitions>
                     <Border Grid.Column="0" 
                             Margin="0 0 4 0">
-                        <Button Style="{DynamicResource SellingScanning}"/>
+                        <Button 
+                            Name="scaner_Btn"
+                            Click="scaner_Btn_Click"
+                            Style="{DynamicResource SellingScanning}"/>
                     </Border>
                     <Border Grid.Column="1"
                             Margin="2 0 2 0">
-                        <Button Style= "{DynamicResource SellingSelling}"/>
+                        <Button 
+                            x:Name="print_Btn"
+                            Click="print_Btn_Click"
+                            Style= "{DynamicResource SellingSelling}"/>
                     </Border>
                     <Border Grid.Column="2"
                             Margin="4 0 0 0">
-                        <Button Style="{DynamicResource SellingRefresh}"/>
+                        <Button
+                            x:Name="refresh_Btn"
+                            Click="refresh_Btn_Click"
+                            Style="{DynamicResource SellingRefresh}"/>
                     </Border>
                 </Grid>
                 <Grid Grid.Row="5"
@@ -524,7 +541,10 @@
                     </Border>
                     <Border Grid.Column="2"
                             Margin="4 0 0 0">
-                        <Button Style="{DynamicResource SellingReturn}"/>
+                        <Button 
+                            x:Name="nation"
+                            Click="nation_Click"
+                            Style="{DynamicResource SellingReturn}"/>
                     </Border>
                 </Grid>
             </Grid>

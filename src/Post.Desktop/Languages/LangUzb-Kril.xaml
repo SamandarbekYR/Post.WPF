@@ -7,6 +7,7 @@
     <system:String x:Key="save">Сақлаш</system:String>
     <system:String x:Key="uz">Ўзбек тили</system:String>
     <system:String x:Key="en">Инглиз тили</system:String>
+    <system:String x:Key="no">Ho.</system:String>
     <system:String x:Key="ru">Рус тили</system:String>
     <system:String x:Key="uz-kiril">Ўзбек-Крил</system:String>
     <system:String x:Key="ConnectedPrinter">Уланган принтер:</system:String>
