@@ -14,9 +14,12 @@ public partial class Selling : Window
 
 
     int activeTextboxIndex = 4;
+
     public Selling()
     {
         dispatcherTimer.Tick += DispatcherTimer_Tick;
+        dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+        dispatcherTimer.Start();
         InitializeComponent();
     }
 
@@ -136,5 +139,11 @@ public partial class Selling : Window
         }
 
         textbox.Text = textbox.Text.Substring(0, textbox.Text.Length - 1);
+    }
+
+    private void buyers_Click(object sender, RoutedEventArgs e)
+    {
+        Buyers buyers = new Buyers();
+        buyers.ShowDialog();
     }
 }

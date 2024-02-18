@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="/Styles/TextBox/TextBoxStyles.xaml"/>
                 <ResourceDictionary Source="/Styles/Button/ButtonStyles.xaml"/>
                 <ResourceDictionary Source="/Styles/Border/BorderStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Scroll/ScrollStyles.xaml"/>
 
                 <ResourceDictionary Source="/Assets/Icons/IconPath.xaml"/>
                 <ResourceDictionary Source="/Languages/LangUzb.xaml"/>

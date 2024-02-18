@@ -43,10 +43,10 @@
     <system:String x:Key="Cancel">Bekor qilish</system:String>
     <system:String x:Key="Retry">Qayta urunish</system:String>
     <system:String x:Key="Send">Yuborish</system:String>
-    <system:String x:Key="PhoneNumber">Telefon raqamingiz</system:String>
+    <system:String x:Key="PhoneNumber">Telefon raqami</system:String>
     <system:String x:Key="GetVerificationCode">Tasdiqlash kodini olish:</system:String>
     <system:String x:Key="BuyerInformation">Haridor ma'lumotlari</system:String>
-    <system:String x:Key="FullName">Ism Familiya</system:String>
+    <system:String x:Key="FullName">Ismi va familiyasi</system:String>
     <system:String x:Key="NewAdd">+ Yangi qo'shish</system:String>
     <system:String x:Key="Id">Id</system:String>
     <system:String x:Key="Choose">Tanlash</system:String>

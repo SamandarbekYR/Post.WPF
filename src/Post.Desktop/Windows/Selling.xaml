@@ -276,14 +276,20 @@
                         </TextBox>
                     </StackPanel>
                 </Border>
-                <Border Grid.Column="3"
-                        Margin="0 2 0 2">
-                    <Button Style="{DynamicResource SellingBuyersButton}">
+                <Border 
+                    Grid.Column="3"
+                    Margin="0 2 0 2">
+                    <Button 
+                        x:Name="buyers"
+                        Click="buyers_Click"
+                        Style="{DynamicResource SellingBuyersButton}">
                     </Button>
                 </Border>
-                <Border Grid.Column="4"
-                        Margin="0 2 0 2">
-                    <Button Style="{DynamicResource SellingPaymentNationButton}">
+                <Border 
+                    Grid.Column="4"
+                    Margin="0 2 0 2">
+                    <Button 
+                        Style="{DynamicResource SellingPaymentNationButton}">
                     </Button>
                 </Border>
             </Grid>
@@ -296,9 +302,13 @@
                 <RowDefinition Height="2.3*"/>
                 <RowDefinition Height="0.4*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0"
-                  Background="White" 
-                  Margin="10"> 
+
+            <Border
+                CornerRadius="6"
+                Grid.Row="0"
+                Background="White" 
+                Margin="10">
+            <Grid> 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
@@ -309,26 +319,31 @@
                     <Image Source="/Assets/Images/user.png" 
                            Stretch="Uniform"/>
                 </Grid>
-                  <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                            <TextBlock Text="Shodiyor Erqo'ziyev"
-                                       FontSize="16"
-                                       FontWeight="Bold"/>
-                            <TextBlock Text="Seller"
-                                       FontSize="14"/>
+                  <StackPanel 
+                      Grid.Column="1" 
+                      VerticalAlignment="Center">
+                      <TextBlock 
+                          Text="Shodiyor Erqo'ziyev"
+                          FontSize="16"
+                          FontWeight="Bold"/>
+                      <TextBlock 
+                          Text="Seller"
+                          FontSize="14"/>
                         </StackPanel>
-                <Border Grid.Column="2"
-                        Margin="10 8 10 10">
-                    <Button 
-                        Width="55"
-                        Height="55"
-                        Style="{DynamicResource LoginShutDownButton}"
-                        Click="btnShutDown">
-                    </Button>
-                </Border>
-            </Grid>
+                    <Border Grid.Column="2"
+                            Margin="10 8 10 10">
+                        <Button 
+                            Width="55"
+                            Height="55"
+                            Style="{DynamicResource LoginShutDownButton}"
+                            Click="btnShutDown">
+                        </Button>
+                    </Border>
+                </Grid>
+            </Border>
             <Grid Grid.Row="1">
                 <Border CornerRadius="6" 
-                        Margin="10 10"
+                        Margin="10 10 10 15"
                         Background="White">
                     <TextBox
                         x:Name="barcode_input"
