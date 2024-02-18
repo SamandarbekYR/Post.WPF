@@ -97,7 +97,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="btnShutDown"
                             Background="Red" 
-                            CornerRadius="20"
+                            CornerRadius="40"
                             Padding="14">
                         <Image Source="/Assets/Images/close.png"
                                Stretch="Uniform"

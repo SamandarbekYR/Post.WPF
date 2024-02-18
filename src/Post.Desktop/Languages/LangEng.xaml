@@ -8,6 +8,7 @@
     <system:String x:Key="uz">Uzbek</system:String>
     <system:String x:Key="en">Engilish</system:String>
     <system:String x:Key="ru">Russian</system:String>
+    <system:String x:Key="no">No.</system:String>
     <system:String x:Key="uz-kiril">Uzbek-Kril</system:String>
     <system:String x:Key="ConnectedPrinter">Connected printer:</system:String>
     <system:String x:Key="AvailablePrinters">Available printers:</system:String>
@@ -49,7 +50,7 @@
     <system:String x:Key="FullName">Full name</system:String>
     <system:String x:Key="Id">Id</system:String>
     <system:String x:Key="Choose">Choose</system:String>
-    <system:String x:Key="Pay">Pay</system:String>
+    <system:String x:Key="Pay">Payment</system:String>
     <system:String x:Key="LogIn">Log In</system:String>
     <system:String x:Key="Password">Password</system:String>
     <system:String x:Key="ForgotPassword">Forgot password</system:String>

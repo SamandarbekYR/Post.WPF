@@ -78,7 +78,7 @@
                 FontSize="16"
                 FontWeight="SemiBold"
                 HorizontalAlignment="Center"
-                Content="No."/>
+                Content="{DynamicResource no}"/>
             <Label
                 Grid.Column="1"
                 FontSize="16"

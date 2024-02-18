@@ -20,8 +20,12 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid Margin="10">
-                <Button Style="{DynamicResource LoginShutDownButton}"
-                        Click="btnShutDown">
+                <Button 
+                    HorizontalAlignment="Right"
+                    Width="50"
+                    Height="50"
+                    Style="{DynamicResource LoginShutDownButton}"
+                    Click="btnShutDown">
                 </Button>
             </Grid>
             <StackPanel Grid.Row="1"
