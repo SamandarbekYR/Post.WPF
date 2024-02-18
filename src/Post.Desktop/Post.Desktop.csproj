@@ -9,13 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Components\**" />
-    <EmbeddedResource Remove="Components\**" />
-    <None Remove="Components\**" />
-    <Page Remove="Components\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Assets\Images\barcode.png" />
     <None Remove="Assets\Images\close.png" />
     <None Remove="Assets\Images\debt.png" />
@@ -23,6 +16,7 @@
     <None Remove="Assets\Images\login.png" />
     <None Remove="Assets\Images\login_bg.jpg" />
     <None Remove="Assets\Images\logout_left.png" />
+    <None Remove="Assets\Images\pay_loan.png" />
     <None Remove="Assets\Images\printer.png" />
     <None Remove="Assets\Images\rbox.png" />
     <None Remove="Assets\Images\receipt.png" />
@@ -36,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Images\pay_loan.png" />
     <Resource Include="Assets\Images\printer.png" />
     <Resource Include="Assets\Images\translate.png" />
   </ItemGroup>

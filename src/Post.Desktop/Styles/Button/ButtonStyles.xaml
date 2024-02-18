@@ -709,7 +709,77 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
-    
+
+    <Style x:Key="BuyersAddButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        Margin="110 0 0 10"
+                        x:Name="B"
+                        Height="40"
+                        Width="170"
+                        Background="#20B757"
+                        CornerRadius="3">
+
+                        <Label
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            Foreground="White"
+                            Content="{DynamicResource NewAdd}"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#1CA14D"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SelectBuyerButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        x:Name="B"
+                        Height="30"
+                        Width="100"
+                        Background="#20B757"
+                        CornerRadius="3">
+
+                        <StackPanel 
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                            <Image Source="/Assets/Images/pay_loan.png"/>
+                            <Label
+                                FontSize="16"
+                                FontWeight="SemiBold"
+                                Foreground="White"
+                                Content="{DynamicResource Choose}"/>
+                        </StackPanel>
+
+                        
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#1CA14D"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>
