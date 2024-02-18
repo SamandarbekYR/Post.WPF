@@ -50,7 +50,7 @@
     <system:String x:Key="NewAdd">+ Yangi qo'shish</system:String>
     <system:String x:Key="Id">Id</system:String>
     <system:String x:Key="Choose">Tanlash</system:String>
-    <system:String x:Key="Actions">Harakatlar</system:String>
+    <system:String x:Key="Pay">To'lash</system:String>
     <system:String x:Key="LogIn">Tizimga kirish</system:String>
     <system:String x:Key="Password">Parolingiz</system:String>
     <system:String x:Key="ForgotPassword">Parolni unutdingizmi</system:String>

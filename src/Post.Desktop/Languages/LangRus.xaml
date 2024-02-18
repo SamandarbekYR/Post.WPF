@@ -50,7 +50,7 @@
     <system:String x:Key="NewAdd">+ Добавить новое</system:String>
     <system:String x:Key="Id">Ид</system:String>
     <system:String x:Key="Choose">Выбирать</system:String>
-    <system:String x:Key="Actions">Действия</system:String>
+    <system:String x:Key="Pay">Платить</system:String>
     <system:String x:Key="LogIn">АВТОРИЗОВАТЬСЯ</system:String>
     <system:String x:Key="Password">Пароль</system:String>
     <system:String x:Key="ForgotPassword">Забыли пароль</system:String>

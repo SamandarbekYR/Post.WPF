@@ -50,7 +50,7 @@
     <system:String x:Key="NewAdd">+ Янги қўшиш</system:String>
     <system:String x:Key="Id">Ид</system:String>
     <system:String x:Key="Choose">Танлаш</system:String>
-    <system:String x:Key="Actions">Харакатлар</system:String>
+    <system:String x:Key="Pay">Ту́лаш</system:String>
     <system:String x:Key="LogIn">Парол</system:String>
     <system:String x:Key="ForgotPassword">Паролни унутдингизми</system:String>
 
