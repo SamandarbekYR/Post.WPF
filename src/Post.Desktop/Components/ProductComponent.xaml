@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="Post.Desktop.Components.ProductComponent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             Height="40">
+    <Border
+        Margin="0 1 20 0"
+        Background="White"
+        x:Name="product_Border"
+        MouseEnter="Border_MouseEnter"
+        MouseLeave="Border_MouseLeave"
+        BorderBrush="Black"
+        BorderThickness="0 0 0 0.5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="90" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Margin="10 0 0 0"
+                Grid.Column="0"
+                FontSize="14"
+                FontWeight="SemiBold"
+                VerticalAlignment="Center"
+                Content="Fanta"/>
+            <Label
+                Margin="10 0 0 0"
+                Grid.Column="1"
+                FontSize="16"
+                FontWeight="SemiBold"
+                VerticalAlignment="Center"
+                Content="544967654321"/>
+            <Label
+                Margin="10 0 0 0"
+                Grid.Column="2"
+                FontSize="16"
+                FontWeight="SemiBold"
+                VerticalAlignment="Center"
+                Content="16000"/>
+            <Label
+                Grid.Column="3"
+                FontSize="16"
+                Margin="20 0"
+                FontWeight="SemiBold"
+                VerticalAlignment="Center"
+                Content="2"/>
+            <Label
+                Margin="10 0 0 0"
+                Grid.Column="4"
+                FontSize="16"
+                FontWeight="SemiBold"
+                VerticalAlignment="Center"
+                Content="32000"/>
+            <Button
+                Grid.Column="5"
+                Click="Delete_Button_Click"
+                Style="{DynamicResource DeleteProductButton}"
+                />
+
+        </Grid>
+    </Border>
+</UserControl>
