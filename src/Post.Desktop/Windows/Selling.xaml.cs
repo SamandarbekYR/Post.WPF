@@ -113,9 +113,7 @@ public partial class Selling : Window
     private void Setting_Button_Click_1(object sender, RoutedEventArgs e)
     {
         Setting setting = new Setting();
-        Application.Current.MainWindow.Opacity = 0.9;
         setting.ShowDialog();
-        Application.Current.MainWindow.Opacity = 1;
     }
 
     private void remove_Btn_Click(object sender, RoutedEventArgs e)

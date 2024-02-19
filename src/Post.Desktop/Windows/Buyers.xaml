@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Buyers" 
-        Height="700" 
-        Width="1000" 
+        WindowState="Maximized"
         ResizeMode="NoResize" 
+        AllowsTransparency="True"
+        Background="#21212121"
         WindowStartupLocation="CenterScreen" 
         WindowStyle="None"
-        MinWidth="1000"
         Loaded="Window_Loaded">
     <Grid
+        Background="White"
+        Height="700" 
+        Width="1000" 
         Margin="20 0 10 10">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -70,6 +73,7 @@
         </StackPanel>
 
         <Grid
+            Margin="10 0"
             Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
@@ -106,7 +110,7 @@
         </Grid>
 
         <Grid
-            Margin="0 10 0 0"
+            Margin="10"
             Grid.Row="3">
 
             <ScrollViewer
