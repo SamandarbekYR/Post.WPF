@@ -55,5 +55,6 @@
     <system:String x:Key="LogIn">Tizimga kirish</system:String>
     <system:String x:Key="Password">Parolingiz</system:String>
     <system:String x:Key="ForgotPassword">Parolni unutdingizmi</system:String>
+    <system:String x:Key="Delete">O'chirish</system:String>
 
 </ResourceDictionary>

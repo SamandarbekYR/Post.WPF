@@ -1,4 +1,5 @@
-﻿using Post.Desktop.Models;
+﻿using Post.Desktop.Components;
+using Post.Desktop.Models;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -184,5 +185,14 @@ public partial class Selling : Window
     private void nation_Click(object sender, RoutedEventArgs e)
     {
 
+    }
+
+    private void Window_Loaded(object sender, RoutedEventArgs e)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            ProductComponent component = new ProductComponent();
+            stp_Product.Children.Add(component);
+        }
     }
 }

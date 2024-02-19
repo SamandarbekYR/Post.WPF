@@ -24,6 +24,7 @@
     <None Remove="Assets\Images\search.png" />
     <None Remove="Assets\Images\settings.png" />
     <None Remove="Assets\Images\translate.png" />
+    <None Remove="Assets\Images\trash.png" />
     <None Remove="Assets\Images\user.png" />
     <None Remove="Assets\Images\users.png" />
     <None Remove="Assets\Images\xclose.png" />
@@ -56,6 +57,7 @@
     <Resource Include="Assets\Images\refresh.png" />
     <Resource Include="Assets\Images\search.png" />
     <Resource Include="Assets\Images\settings.png" />
+    <Resource Include="Assets\Images\trash.png" />
     <Resource Include="Assets\Images\user.png" />
     <Resource Include="Assets\Images\users.png" />
     <Resource Include="Assets\Images\xclose.png" />

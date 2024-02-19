@@ -55,5 +55,7 @@
     <system:String x:Key="LogIn">АВТОРИЗОВАТЬСЯ</system:String>
     <system:String x:Key="Password">Пароль</system:String>
     <system:String x:Key="ForgotPassword">Забыли пароль</system:String>
+    <system:String x:Key="Delete">Удалить</system:String>
+
 
 </ResourceDictionary>

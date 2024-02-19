@@ -54,5 +54,6 @@
     <system:String x:Key="Pay">Ту́лаш</system:String>
     <system:String x:Key="LogIn">Парол</system:String>
     <system:String x:Key="ForgotPassword">Паролни унутдингизми</system:String>
+    <system:String x:Key="Delete">Ўчириш</system:String>
 
 </ResourceDictionary>

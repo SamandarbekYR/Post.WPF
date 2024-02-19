@@ -54,5 +54,6 @@
     <system:String x:Key="LogIn">Log In</system:String>
     <system:String x:Key="Password">Password</system:String>
     <system:String x:Key="ForgotPassword">Forgot password</system:String>
+    <system:String x:Key="Delete">Delete</system:String>
 
 </ResourceDictionary>

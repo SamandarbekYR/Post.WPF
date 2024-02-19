@@ -816,4 +816,34 @@
         </Setter>
     </Style>
 
+    <Style x:Key="DeleteProductButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        x:Name="B"
+                        Height="25"
+                        Width="40"
+                        BorderThickness="0.3"
+                        BorderBrush="#BBBBBB"
+                        CornerRadius="3">
+                        
+                        <Image 
+                            Height="15"
+                            Source="/Assets/Images/trash.png"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#CDCDCD"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
 </ResourceDictionary>
