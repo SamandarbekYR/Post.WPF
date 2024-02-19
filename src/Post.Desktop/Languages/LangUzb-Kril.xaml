@@ -22,7 +22,7 @@
     <system:String x:Key="Barcode">Штрих-код</system:String>
     <system:String x:Key="Name">Номи</system:String>
     <system:String x:Key="Produced">Ишлаб чикарилган</system:String>
-    <system:String x:Key="Cost">Ишлаб чиқарилган</system:String>
+    <system:String x:Key="Cost">Нарxи</system:String>
     <system:String x:Key="Quantity">Миқдор</system:String>
     <system:String x:Key="TotalCost">Жами нархи</system:String>
     <system:String x:Key="TurnOff">Ўчириш</system:String>
@@ -40,14 +40,14 @@
     <system:String x:Key="Return">Қайтариш</system:String>
     <system:String x:Key="Yes">Ха</system:String>
     <system:String x:Key="No">Йок</system:String>
-    <system:String x:Key="Ok">Хорошо</system:String>
+    <system:String x:Key="Ok">Яxши</system:String>
     <system:String x:Key="Cancel">Бекор килиш</system:String>
     <system:String x:Key="Retry">Кайта уруниш</system:String>
     <system:String x:Key="Send">Юбориш</system:String>
     <system:String x:Key="PhoneNumber">Телефон рақамингиз</system:String>
     <system:String x:Key="GetVerificationCode">Тасдиқлаш кодини олиш:</system:String>
     <system:String x:Key="BuyerInformation">Харидор малумотлари</system:String>
-    <system:String x:Key="FullName">Исм Фамилия</system:String>
+    <system:String x:Key="FullName">Исми вa Фамилияcи</system:String>
     <system:String x:Key="NewAdd">+ Янги қўшиш</system:String>
     <system:String x:Key="Id">Ид</system:String>
     <system:String x:Key="Choose">Танлаш</system:String>
