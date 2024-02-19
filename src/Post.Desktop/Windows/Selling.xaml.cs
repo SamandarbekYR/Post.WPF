@@ -1,9 +1,11 @@
 ﻿using Post.Desktop.Components;
 using Post.Desktop.Models;
+using Post.Desktop.Services;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using static Post.Desktop.Components.MessageWindow;
 
 namespace Post.Desktop.Windows;
 
@@ -13,9 +15,11 @@ namespace Post.Desktop.Windows;
 public partial class Selling : Window
 { 
     DispatcherTimer dispatcherTimer = new DispatcherTimer();
+    public string lang = Post.Desktop.Properties.Settings.Default.languageCode;
 
 
     int activeTextboxIndex = 4;
+    public string message = "";
 
     public Selling()
     {
@@ -33,7 +37,19 @@ public partial class Selling : Window
 
     private void btnShutDown(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        message = lang switch
+        {
+            "uz" => "Ilovadan chiqmoqchimisiz?",
+            "ru" => "Вы хотите выйти из приложения??",
+            "en" => "Are you sure exit app?",
+            "uz-Cyrl" => "Иловадан чиқмоқчимисиз?"
+        };
+        var messageBox = new MessageWindow(message, MessageType.Confirmation, MessageButtons.YesNo);
+        var result = messageBox.ShowDialog();
+        if (result == true)
+        {
+            Application.Current.Shutdown();
+        }
     }
 
     private void SetTotalPrice()
@@ -102,7 +118,24 @@ public partial class Selling : Window
 
     private void Exit_Button_Click(object sender, RoutedEventArgs e)
     {
-        
+        message = lang switch
+        {
+            "uz" => "Profildan chiqmoqchimisiz?",
+            "ru" => "Вы уверены, что вышли из профиля?",
+            "en" => "Are you sure logout from profile?",
+            "uz-Cyrl" => "Профилдан чиқишингизга ишончингиз комилми!"
+        };
+        var messageBox = new MessageWindow(message, MessageType.Confirmation, MessageButtons.YesNo);
+        var result = messageBox.ShowDialog();
+        if (result == true)
+        {
+            using var tokenService = new TokenService();
+            tokenService.RemoveCreditionals();
+
+            Login login = new Login();
+            this.Close();
+            login.ShowDialog();
+        }
     }
 
     private void Button_Click_1(object sender, RoutedEventArgs e)

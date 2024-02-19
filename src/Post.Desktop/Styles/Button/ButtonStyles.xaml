@@ -567,7 +567,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border 
-                    Width="170"
+                    Width="200"
                     Height="50"
                     x:Name="BorderBtn"
                     Background="#3F51B5">
@@ -607,7 +607,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border 
-                        Width="170"
+                        Width="200"
                         Height="50"
                         x:Name="BorderBtn"
                         Background="#3F51B5">
@@ -845,5 +845,38 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
+    <Style x:Key="MessageBoxButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        x:Name="B"
+                        Height="40"
+                        Width="110"
+                        Background="#0000B2"
+                        CornerRadius="3">
+
+                        <Label
+                            FontSize="15"
+                            FontWeight="SemiBold"
+                            Foreground="White"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#000091"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
