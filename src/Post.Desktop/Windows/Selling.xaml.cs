@@ -112,11 +112,6 @@ public partial class Selling : Window
         activeTextboxIndex = int.Parse(((TextBox)sender).Uid);
     }
 
-    private void Button_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-
     private void Exit_Button_Click(object sender, RoutedEventArgs e)
     {
         lang = Post.Desktop.Properties.Settings.Default.languageCode;
@@ -138,11 +133,6 @@ public partial class Selling : Window
             this.Close();
             login.ShowDialog();
         }
-    }
-
-    private void Button_Click_1(object sender, RoutedEventArgs e)
-    {
-
     }
 
     private void Setting_Button_Click_1(object sender, RoutedEventArgs e)
@@ -227,5 +217,16 @@ public partial class Selling : Window
             ProductComponent component = new ProductComponent();
             stp_Product.Children.Add(component);
         }
+    }
+
+    private void return_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void search_Click(object sender, RoutedEventArgs e)
+    {
+        ProductSearchWindow productSearchWindow = new ProductSearchWindow();
+        productSearchWindow.ShowDialog();
     }
 }

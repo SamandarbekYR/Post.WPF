@@ -15,7 +15,6 @@
         Width="400">
 
     <Border
-        Name="Header_Border"
         CornerRadius="5"
         BorderBrush="Black"
         BorderThickness="1"
@@ -29,6 +28,7 @@
             </Grid.RowDefinitions>
 
             <Border
+                Name="Header_Border"
                 CornerRadius="5"
                 Background="DarkBlue"
                 Grid.Row="0">

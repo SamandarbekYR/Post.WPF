@@ -363,7 +363,7 @@
                             <Image Height="50" 
                                    Source="/Assets/Images/barcode.png"/>
                             <TextBlock Style="{DynamicResource MoneyLabel}"
-                                       Text="Scanning"
+                                       Text="{DynamicResource Scanning}"
                                        Foreground="White"/>
                         </StackPanel>
                     </Border>
@@ -394,7 +394,7 @@
                             <Image Height="40" 
                                    Source="/Assets/Images/receipt.png"/>
                             <TextBlock Style="{DynamicResource MoneyLabel}"
-                                    Text="Selling"
+                                    Text="{DynamicResource Sell}"
                                     Foreground="White"/>
                         </StackPanel>
                     </Border>
@@ -425,7 +425,7 @@
                             <Image Height="40" 
                                    Source="/Assets/Images/refresh.png"/>
                             <TextBlock Style="{DynamicResource MoneyLabel}"
-                                       Text="Refresh"
+                                       Text="{DynamicResource Refresh}"
                                        Foreground="White"/>
                         </StackPanel>
                     </Border>
@@ -455,7 +455,7 @@
                             <Image Height="40" 
                                    Source="/Assets/Images/search.png"/>
                             <TextBlock Style="{DynamicResource MoneyLabel}"
-                                       Text="Search"
+                                       Text="{DynamicResource Search}"
                                        Foreground="White"/>
                         </StackPanel>
                     </Border>
@@ -469,7 +469,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-
     </Style>
 
     <Style x:Key="SellingNation" TargetType="{x:Type Button}">
@@ -487,7 +486,7 @@
                             <Image Height="40" 
                                    Source="/Assets/Images/debt.png"/>
                             <TextBlock Style="{DynamicResource MoneyLabel}"
-                                       Text="Nation"
+                                       Text="{DynamicResource Nation}"
                                        Foreground="White"/>
                         </StackPanel>
                     </Border>
@@ -518,7 +517,7 @@
                             <Image Height="40" 
                                    Source="/Assets/Images/rbox.png"/>
                             <TextBlock Style="{DynamicResource MoneyLabel}"
-                                       Text="Return"
+                                       Text="{DynamicResource Return}"
                                        Foreground="White"/>
                         </StackPanel>
                     </Border>
@@ -545,10 +544,11 @@
                         BorderThickness="1"
                         BorderBrush="#cf0018"
                         Background="#cf0018">
-                        <Image Height="40" 
-                                   Source="/Assets/Images/left.png"
-                                   VerticalAlignment="Center"
-                                   HorizontalAlignment="Center"/>
+                        <Image 
+                            Height="40" 
+                            Source="/Assets/Images/left.png"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
                     </Border>
 
                     <ControlTemplate.Triggers>
