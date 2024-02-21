@@ -37,10 +37,11 @@ public partial class Selling : Window
 
     private void btnShutDown(object sender, RoutedEventArgs e)
     {
+        lang = Post.Desktop.Properties.Settings.Default.languageCode;
         message = lang switch
         {
             "uz" => "Ilovadan chiqmoqchimisiz?",
-            "ru" => "Вы хотите выйти из приложения??",
+            "ru" => "Вы хотите выйти из приложения?",
             "en" => "Are you sure exit app?",
             "uz-Cyrl" => "Иловадан чиқмоқчимисиз?"
         };
@@ -111,19 +112,15 @@ public partial class Selling : Window
         activeTextboxIndex = int.Parse(((TextBox)sender).Uid);
     }
 
-    private void Button_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-
     private void Exit_Button_Click(object sender, RoutedEventArgs e)
     {
+        lang = Post.Desktop.Properties.Settings.Default.languageCode;
         message = lang switch
         {
             "uz" => "Profildan chiqmoqchimisiz?",
-            "ru" => "Вы уверены, что вышли из профиля?",
-            "en" => "Are you sure logout from profile?",
-            "uz-Cyrl" => "Профилдан чиқишингизга ишончингиз комилми!"
+            "ru" => "Вы хотите выйти из системы?",
+            "en" => "Do you want to log out?",
+            "uz-Cyrl" => "Профилдан чиқмоқчимисиз?"
         };
         var messageBox = new MessageWindow(message, MessageType.Confirmation, MessageButtons.YesNo);
         var result = messageBox.ShowDialog();
@@ -136,11 +133,6 @@ public partial class Selling : Window
             this.Close();
             login.ShowDialog();
         }
-    }
-
-    private void Button_Click_1(object sender, RoutedEventArgs e)
-    {
-
     }
 
     private void Setting_Button_Click_1(object sender, RoutedEventArgs e)
@@ -225,5 +217,16 @@ public partial class Selling : Window
             ProductComponent component = new ProductComponent();
             stp_Product.Children.Add(component);
         }
+    }
+
+    private void return_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void search_Click(object sender, RoutedEventArgs e)
+    {
+        ProductSearchWindow productSearchWindow = new ProductSearchWindow();
+        productSearchWindow.ShowDialog();
     }
 }

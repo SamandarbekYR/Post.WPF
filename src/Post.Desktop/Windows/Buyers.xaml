@@ -52,7 +52,7 @@
                 >
                 <TextBox
                     x:Name="tb_Search"
-                    Text="Search..."
+                    Text="{DynamicResource Search}"
                     BorderThickness="0"
                     Margin="5 0 10 2"
                     FontSize="15"

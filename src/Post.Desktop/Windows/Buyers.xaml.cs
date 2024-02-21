@@ -34,7 +34,7 @@ public partial class Buyers : Window
         search_Border.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
         tb_Search.Foreground = Brushes.Gray;
         tb_Search.FontSize = 15;
-        tb_Search.Text = "Search...";
+        tb_Search.Text = (string)Application.Current.Resources["Search"];
     }
 
     private void new_customer_Click(object sender, RoutedEventArgs e)

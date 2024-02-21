@@ -35,7 +35,8 @@
     <system:String x:Key="Scanning">Skanerlash</system:String>
     <system:String x:Key="Sell">Sotish</system:String>
     <system:String x:Key="Refresh">Yangilash</system:String>
-    <system:String x:Key="Search">Qidirish</system:String>
+    <system:String x:Key="Search">Qidirish...</system:String>
+    <system:String x:Key="SearchProduct">Maxsulotni qidirish</system:String>
     <system:String x:Key="Nation">Nasiya</system:String>
     <system:String x:Key="Return">Qaytarish</system:String>
     <system:String x:Key="Yes">Ha</system:String>

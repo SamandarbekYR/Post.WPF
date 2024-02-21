@@ -35,7 +35,8 @@
     <system:String x:Key="Scanning">Scanning</system:String>
     <system:String x:Key="Sell">Selling</system:String>
     <system:String x:Key="Refresh">Refresh</system:String>
-    <system:String x:Key="Search">Search</system:String>
+    <system:String x:Key="Search">Search...</system:String>
+    <system:String x:Key="SearchProduct">Product search</system:String>
     <system:String x:Key="Nation">Nation</system:String>
     <system:String x:Key="Return">Return</system:String>
     <system:String x:Key="Yes">Yes</system:String>

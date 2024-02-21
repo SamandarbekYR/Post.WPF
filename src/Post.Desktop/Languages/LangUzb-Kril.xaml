@@ -35,7 +35,8 @@
     <system:String x:Key="Scanning">Сканерлаш</system:String>
     <system:String x:Key="Sell">Сотиш</system:String>
     <system:String x:Key="Refresh">Янгилаш</system:String>
-    <system:String x:Key="Search">Қидириш</system:String>
+    <system:String x:Key="Search">Қидириш...</system:String>
+    <system:String x:Key="SearchProduct">Maxcyлoтни қидириш</system:String>
     <system:String x:Key="Nation">Нация</system:String>
     <system:String x:Key="Return">Қайтариш</system:String>
     <system:String x:Key="Yes">Ха</system:String>
