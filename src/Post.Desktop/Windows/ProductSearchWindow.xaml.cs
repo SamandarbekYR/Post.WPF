@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using Post.Desktop.Components;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
@@ -19,6 +20,11 @@ public partial class ProductSearchWindow : Window
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
         EnableBlur();
+        for (int i = 0; i < 5; i++)
+        {
+            SearchedProductComponent searchedProductComponent = new SearchedProductComponent();
+            stp_Products.Children.Add(searchedProductComponent);
+        }
     }
 
     private void close_btn_Click(object sender, RoutedEventArgs e)
@@ -37,7 +43,7 @@ public partial class ProductSearchWindow : Window
     {
         search_Border.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
         tb_Search.Foreground = Brushes.Gray;
-        tb_Search.FontSize = 15;
+        tb_Search.FontSize = 14;
         tb_Search.Text = (string)Application.Current.Resources["Search"];
     }
 

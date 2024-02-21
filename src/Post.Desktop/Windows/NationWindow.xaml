@@ -55,7 +55,7 @@
                     Text="{DynamicResource Search}"
                     BorderThickness="0"
                     Margin="5 0 10 2"
-                    FontSize="15"
+                    FontSize="14"
                     Foreground="Gray"
                     GotFocus="TextBox_GotFocus"
                     LostFocus="tb_Search_LostFocus"

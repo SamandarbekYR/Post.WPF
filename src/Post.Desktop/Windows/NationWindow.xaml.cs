@@ -32,7 +32,7 @@ public partial class NationWindow : Window
     {
         search_Border.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
         tb_Search.Foreground = Brushes.Gray;
-        tb_Search.FontSize = 15;
+        tb_Search.FontSize = 14;
         tb_Search.Text = (string)Application.Current.Resources["Search"]; ;
     }
 
