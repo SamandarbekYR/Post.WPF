@@ -752,7 +752,7 @@
                     <Border
                         x:Name="B"
                         Height="30"
-                        Width="100"
+                        Width="120"
                         Background="#20B757"
                         CornerRadius="3">
 
