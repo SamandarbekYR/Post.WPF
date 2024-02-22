@@ -133,7 +133,7 @@
                                 Background="White">
                             <StackPanel Margin="8">
                                 <TextBox
-                                    x:Name="total"
+                                    x:Name="total_Price"
                                     IsReadOnly="True"
                                     Width="200"
                                     Style="{DynamicResource MoneyTextBox}"
@@ -195,15 +195,16 @@
                             VerticalAlignment="Center"
                             Content="{DynamicResource Cost}"/>
                         <Label
-                            Grid.Column="3"
-                            Margin="10 0 0 0"
+                            Grid.Column="4"
+                            Margin="0 0 0 0"
                             FontSize="14"
                             Foreground="#525252"
                             FontWeight="SemiBold"
                             VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
                             Content="{DynamicResource Quantity}"/>
                         <Label
-                            Grid.Column="4"
+                            Grid.Column="3"
                             Margin="10 0 0 0"
                             FontSize="14"
                             Foreground="#525252"
@@ -266,10 +267,12 @@
                     <StackPanel Margin="10"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
-                        <TextBox IsReadOnly="True"
-                                 Text="UnknownBuyer"
-                                 Style="{DynamicResource MoneyTextBox}"
-                                 Foreground="#3F51B5">
+                        <TextBox 
+                            x:Name="tb_buyer_name"
+                            IsReadOnly="True"
+                            Text="{DynamicResource UnknownBuyer}"
+                            Style="{DynamicResource MoneyTextBox}"
+                            Foreground="#3F51B5">
                         </TextBox>
                     </StackPanel>
                 </Border>
@@ -325,14 +328,14 @@
                           FontSize="16"
                           FontWeight="Bold"/>
                       <TextBlock 
-                          Text="Seller"
+                          Text="{DynamicResource Seller}"
                           FontSize="14"/>
                         </StackPanel>
                     <Border Grid.Column="2"
                             Margin="10 8 10 10">
                         <Button 
-                            Width="55"
-                            Height="55"
+                            Width="45"
+                            Height="45"
                             Style="{DynamicResource LoginShutDownButton}"
                             Click="btnShutDown">
                         </Button>

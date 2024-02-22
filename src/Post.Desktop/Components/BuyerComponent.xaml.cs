@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using Post.Desktop.Windows;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -26,6 +28,27 @@ public partial class BuyerComponent : UserControl
 
     private void Choose_Button_Click(object sender, System.Windows.RoutedEventArgs e)
     {
+        Buyers buyers = GetBuyersWindow();
+        buyers.BuyerName = buyer_name.Content.ToString()!;
+        buyers.Close();
+    }
 
+    public static Buyers GetBuyersWindow()
+    {
+        Buyers buyers = null!;
+
+        foreach (Window window in Application.Current.Windows)
+        {
+            Type type = typeof(Buyers);
+            if (window != null && window.DependencyObjectType.Name == type.Name)
+            {
+                buyers = (Buyers)window;
+                if (buyers != null)
+                {
+                    break;
+                }
+            }
+        }
+        return buyers!;
     }
 }
