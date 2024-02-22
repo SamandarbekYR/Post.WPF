@@ -23,6 +23,7 @@
             </Grid.ColumnDefinitions>
 
             <Label
+                Name="buyer_number"
                 Grid.Column="0"
                 FontSize="16"
                 FontWeight="SemiBold"
@@ -30,6 +31,7 @@
                 HorizontalAlignment="Center"
                 Content="1"/>
             <Label
+                Name="buyer_name"
                 Margin="50 0 0 0"
                 Grid.Column="1"
                 FontSize="16"
@@ -37,6 +39,7 @@
                 VerticalAlignment="Center"
                 Content="Erqo'ziyev Shodiyor"/>
             <Label
+                Name="buyer_phone"
                 Margin="50 0 0 0"
                 Grid.Column="2"
                 FontSize="16"

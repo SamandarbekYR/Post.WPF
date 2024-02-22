@@ -823,10 +823,11 @@
 
                     <Border
                         x:Name="B"
-                        Height="25"
-                        Width="40"
+                        Height="35"
+                        Width="45"
                         BorderThickness="0.3"
                         BorderBrush="#BBBBBB"
+                        Background="White"
                         CornerRadius="3">
                         
                         <Image 
@@ -871,6 +872,40 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="B" Property="Background" Value="#000091"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="AddProductButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        x:Name="B"
+                        Height="35"
+                        Width="35"
+                        BorderThickness="0.3"
+                        BorderBrush="#BBBBBB"
+                        Background="White"
+                        CornerRadius="3">
+
+                        <Path
+                            Width="10"
+                            Height="10"
+                            Data="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type Button}}}"
+                            Fill="Black"
+                            Stretch="Uniform"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#CDCDCD"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
 

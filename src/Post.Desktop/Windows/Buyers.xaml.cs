@@ -1,4 +1,5 @@
 ﻿using Post.Desktop.Components;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
@@ -12,12 +13,14 @@ namespace Post.Desktop.Windows;
 /// </summary>
 public partial class Buyers : Window
 {
+
+    public string BuyerName { get; set; } = string.Empty;
     public Buyers()
     {
         InitializeComponent();
     }
 
-    private void close_Button_Click(object sender, RoutedEventArgs e)
+    public void close_Button_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
     }
@@ -78,5 +81,4 @@ public partial class Buyers : Window
 
         Marshal.FreeHGlobal(accentPtr);
     }
-
 }

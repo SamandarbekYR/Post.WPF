@@ -35,7 +35,7 @@
     <system:String x:Key="Scanning">Сканирование</system:String>
     <system:String x:Key="Sell">Продажа</system:String>
     <system:String x:Key="Refresh">Обновить</system:String>
-    <system:String x:Key="Search">Поиск...</system:String>
+    <system:String x:Key="Search">Поиск</system:String>
     <system:String x:Key="SearchProduct">Поиск продукта</system:String>
     <system:String x:Key="Nation">Нация</system:String>
     <system:String x:Key="Return">Повторение</system:String>

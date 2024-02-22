@@ -168,6 +168,11 @@ public partial class Selling : Window
     {
         Buyers buyers = new Buyers();
         buyers.ShowDialog();
+
+        if (!string.IsNullOrEmpty(buyers.BuyerName))
+        {
+            tb_buyer_name.Text = buyers.BuyerName; 
+        }
     }
 
     private void nation_Button_Click(object sender, RoutedEventArgs e)
@@ -188,7 +193,7 @@ public partial class Selling : Window
 
     private void refresh_Btn_Click(object sender, RoutedEventArgs e)
     {
-        total.Text = "0";
+        total_Price.Text = "0";
         naqd.Text = "0";
         plastik.Text = "0";
         chegirma.Text = "0";
